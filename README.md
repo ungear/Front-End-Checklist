@@ -6,39 +6,39 @@
 [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/thedaviddias/front-end-checklist)
 [![CC0](https://img.shields.io/badge/license-CC0-green.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-The **Front-End Checklist** is an exhaustive list of all elements you need to have / to test before launching your site / HTML page to production.
+**Front-End Checklist** - это исчерпывающий список элементов сайта или HTML страницы, которые должны быть проверены перед выпуском в production.
 
-It is based on Front-End developers' years of experience, with the additions coming from some other open-source checklists.
+Он основан на многолетнем опыте front-end разработчиков и, кроме того, включает в себя части других открытых checklist-ов.
 
-*Help to share the Front-End Checklist by voting and recommending on Product Hunt*
+*Проголосуй или порекомендуй Front-End Checklist на платформе Product Hunt чтобы помочь с продвижением.*
 [![](http://res.cloudinary.com/djnyaloac/image/upload/v1508896898/upvote-producthunt_vzys4c.jpg)](https://www.producthunt.com/posts/front-end-checklist)
 
-## Table of Contents
+## Содержание
 
 1. **[Head](#head)**
 2. **[HTML](#html)**
 3. **[Webfonts](#webfonts)**
 4. **[CSS](#css)**
-5. **[Images](#images)**
+5. **[Картинки](#images)**
 6. **[JavaScript](#javascript)**
-7. **[Security](#security)**
-8. **[Performance](#performance-1)**
-9. **[Accessibility](#accessibility)**
+7. **[Безопасность](#security)**
+8. **[Производительность](#performance-1)**
+9. **[Доступ](#accessibility)**
 10. **[SEO](#seo)**
 
-## How to use?
+## Как этим пользоваться?
 
-All items in the **Front-End Checklist** are required for the majority of the projects, but some elements can be omitted or are not essential (in the case of an administration web app, you may not need RSS feed for example). We choose to use 3 levels of flexibility:
+Все пункты **Front-End Checklist** обязательны для большинства сайтов, однако некоторые элементы могут быть менее важны или вовсе пропущены (например если вам не нужен RSS для админки проложения). Мы выбрали 3 уровня гибкости:
 
-* ![Low][low_img] means that the item is **recommended** but can be omitted in some particular situations.
-* ![Medium][medium_img] means that the item is **highly recommended** and can eventually be omitted in some really particular cases. Some elements, if omitted, can have bad repercussions in terms of performance or SEO.
-* ![High][high_img] means that the item **can't be omitted** by any reason. You may cause a dysfunction in your page or have accessibility or SEO issues. The testing priority needs to be on these elements first.
+* ![Low][low_img] означает, что пункт **рекомендован**, но может быть пропущен в некоторых случаях.
+* ![Medium][medium_img] элемент **крайне рекомендован** и можен быть пропущен только в очень специфических ситуациях. Невыполнение некоторых пунктов может иметь негативные последствия, например с точки производительности или SEO.
+* ![High][high_img] такой пункт **обязателен**. Может сломать страницу или привести к проблемам с доступом и SEO. Проверяйте такие элементы в первую очередь.
 
-Some resources possess an emoticon to help you understand which type of content / help you may find on the checklist:
+Некоторые комментарии снабжены иконками, чтобы вы лучше понимали, какой контент или помощь можно найти:
 
-* 📖: documentation or article
-* 🛠: online tool / testing tool
-* 📹: media or video content
+* 📖: документация или статья
+* 🛠: он-лайн инструменты / утилиты для проверки
+* 📹: медиа или видео контент
 
 ---
 
