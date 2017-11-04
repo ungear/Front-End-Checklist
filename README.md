@@ -44,79 +44,79 @@
 
 ## Head
 
-> **Notes:** You can find [a list of everything](https://github.com/joshbuchea/HEAD) that could be found in the `<head>` of an HTML document.
+> **Примечание:** Можно посмотреть [список всего](https://github.com/joshbuchea/HEAD), что может быть в `<head>` HTML документа.
 
-### Meta tag
+### Мета-теги
 
-* [ ] **Doctype:** ![High][high_img] The Doctype is HTML5 and is at the top of all your HTML pages.
+* [ ] **Doctype:** ![High][high_img] Doctype отностится к HTML5 и находится в самом верху HTML страниц.
 
 ```html
 <!-- Doctype HTML5 -->
 <!doctype html>
 ```
 
-> * 📖 [Determining the character encoding - HTML5 W3C](https://www.w3.org/TR/html5/syntax.html#determining-the-character-encoding)
+> * 📖 [Определение кодировки (англ.) - HTML5 W3C](https://www.w3.org/TR/html5/syntax.html#determining-the-character-encoding)
 
-*The next 3 meta tags (Charset, X-UA Compatible and Viewport) need to come first in the head.*
+*Следующие 3 мета-тега (Charset, X-UA Compatible and Viewport) должны быть расположены в самом начале `<head>`.*
 
-* [ ] **Charset:** ![High][high_img] The charset (UTF-8) is declared correctly.
+* [ ] **Charset:** ![High][high_img] Кодировка (UTF-8) задана правильно.
 
 ```html
-<!-- Set character encoding for the document -->
+<!-- Задать кодировку документа -->
 <meta charset="utf-8">
 ```
 
-* [ ] **X-UA-Compatible:** ![Medium][medium_img] The X-UA-Compatible meta tag is present.
+* [ ] **X-UA-Compatible:** ![Medium][medium_img] Тег X-UA-Compatible присутствует.
 
 ```html
-<!-- Instruct Internet Explorer to use its latest rendering engine -->
+<!-- Проинструктировать Internet Explorer использовать последний движок рендеринга -->
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 ```
 
-> * 📖 [Specifying legacy document modes (Internet Explorer)](https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx)
+> * 📖 [Задать режим совместимости Internet Explorer (англ.)](https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx)
 
-* [ ] **Viewport:** ![High][high_img] The viewport is declared correctly.
+* [ ] **Viewport:** ![High][high_img] Viewport задан правильно.
 
 ```html
-<!-- Viewport for responsive web design -->
+<!-- Задать viewport для responsive дизайна -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
-* [ ] **Title:** ![High][high_img] A title is used on all pages (SEO: Google calculate the pixel width of the characters used in the title, cut off between 472 and 482 pixels. Average character limit would be around 55-characters).
+* [ ] **Title:** ![High][high_img] Задан на всех страницах (SEO: Google рассчитывает ширину символов в title и обрезает примерно от 472 до 482 пикселей. Так что предел длины title около 55 символов).
 
 ```html
 <!-- Document Title -->
-<title>Page Title less than 55 characters</title>
+<title>Название короче 55 символов</title>
 ```
 
 > * 📖 [Title - HTML - MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)
 > * 🛠 [SERP Snippet Generator](https://www.sistrix.com/serp-snippet-generator/)
 
-* [ ] **Description:** ![High][high_img] A meta description is provided, it is unique and doesn't possess more than 150 characters.
+* [ ] **Description:** ![High][high_img] Description задан, уникален и короче 150 символов.
 
 ```html
 <!-- Meta Description -->
-<meta name="description" content="Description of the page less than 150 characters">
+<meta name="description" content="Описание страницы короче 150 символов">
 ```
 
 > * 📖[Meta Description - HTML - MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_an_author_and_description)
 
-* [ ] **Favicons:** ![Medium][medium_img] Each favicon has been created and displays correctly. If you have only a `favicon.ico`, put it at the root of your site. Normally you won't need to use any markup. However, it's still good practice to link to it using the example below. Today, **PNG format is recommended** over `.ico` format (dimensions: 32x32px).
+* [ ] **Favicons:** ![Medium][medium_img] Иконки отображаются корректно. Если у вас только один `favicon.ico`, положите его в корень сайта. Обычно вам не нужно ничего добавлять в разметку. Однако, хорошей практикой считается сделать ссылку как в примере ниже. На сегодняшний день **рекомендован PNG формат** вместо `.ico`(разрешение: 32x32px).
 
 ```html
-<!-- Standard favicon -->
+<!-- Стандартный favicon -->
 <link rel="icon" type="image/x-icon" href="https://example.com/favicon.ico">
-<!-- Recommended favicon format -->
+<!-- Рекомендованный формат favicon -->
 <link rel="icon" type="image/png" href="https://example.com/favicon.png">
 ```
 
 > * 🛠 [Favicon Generator](https://www.favicon-generator.org/)
 > * 🛠 [RealFaviconGenerator](https://realfavicongenerator.net/)
-> * 📖 [Favicon Cheat Sheet](https://github.com/audreyr/favicon-cheat-sheet)
+> * 📖 [Favicon шпаргалка](https://github.com/audreyr/favicon-cheat-sheet)
 > * 📖 [Favicons, Touch Icons, Tile Icons, etc. Which Do You Need? - CSS Tricks](https://css-tricks.com/favicon-quiz/)
 > * 📖 [PNG favicons - caniuse](https://caniuse.com/#feat=link-icon-png)
 
-* [ ] **Apple Touch Icon:** ![Low][low_img] Apple touch favicon apple-mobile-web-app-capable are present *(Create your Apple Icon file with at least 200x200px dimension to support all dimensions that you may need).*
+* [ ] **Apple Touch Icon:** ![Low][low_img] Иконка для Apple задана с помощью apple-mobile-web-app-capable *(Создайте файл Apple Icon с разрешением как минимум 200x200px для поддержки всех разрешений, которые могут вам понадобиться).*
 
 ```html
 <!-- Apple Touch Icon -->
@@ -125,14 +125,14 @@
 
 > * 📖 [Configuring Web Applications](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
 
-- [ ] **Windows Tiles:**![Low][low_img] Windows tiles are present and linked.
+- [ ] **Windows Tiles:**![Low][low_img] Windows tiles заданы.
 
 ```html
 <!-- Microsoft Tiles -->
 <meta name="msapplication-config" content="browserconfig.xml" />
 ```
 
-Minimum required xml markup for the browserconfig.xml file is as follows:
+Минимальный требуемый browserconfig.xml:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -150,17 +150,17 @@ Minimum required xml markup for the browserconfig.xml file is as follows:
 
 > * 📖 [Browser configuration schema reference](https://msdn.microsoft.com/en-us/library/dn320426(v=vs.85).aspx)
 
-* [ ] **Canonical:** ![Medium][medium_img] Use `rel="canonical"` to avoid duplicate content.
+* [ ] **Canonical:** ![Medium][medium_img] Используйте `rel="canonical"` чтобы избежать дублированности контента.
 
 ```html
-<!-- Helps prevent duplicate content issues -->
+<!-- Помогает избежать проблем с дублированным контентом -->
 <link rel="canonical" href="http://example.com/2017/09/a-new-article-to-red.html">
 ```
 
 > * 📖 [Use canonical URLs - Search Console Help - Google Support](https://support.google.com/webmasters/answer/139066?hl=en)
 > * 📖 [5 common mistakes with rel=canonical - Google Webmaster Blog](https://webmasters.googleblog.com/2013/04/5-common-mistakes-with-relcanonical.html)
 
-### HTML tags
+### HTML теги
 
 * [ ] **Language attribute:** ![High][high_img] The `lang` attribute of your website is specified and related to the language of the current page.
 
