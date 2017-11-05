@@ -193,13 +193,13 @@
 
 * [ ] **Порядок CSS:** ![High][high_img] Все CSS файлы должны загружаться перед любыми JavaScript файлами в `<head>`. (За исключением случаев, когда JS файлы загружаются асинхронно в верху страницы).
 
-### Social meta
+### Социальные сети
 
-***Facebook OG*** and ***Twitter Cards*** are, for any website, highly recommended. The other social media tags can be considered if you target a particular presence on those and want to ensure the display.
+***Facebook OG*** и ***Twitter Cards*** крайне рекомендованы для всех сайтов. Рассмотрите теги для других соц. сетей, если планируете отображаться в них коретно.
 
-* [ ] **Facebook Open Graph:** ![Low][low_img] All Facebook Open Graph (OG) are tested and no one is missing or with a false information. Images need to be at least 600 x 315 pixels, 1200 x 630 pixels recommended.
+* [ ] **Facebook Open Graph:** ![Low][low_img] Все теги All Facebook Open Graph (OG) протестированы, ни один не пропущен и информация в них верна. Картинки должны быть хотя бы 600 x 315 пикселей. Рекомендуемое разрешение 1200 x 630 пикселей.
 
-> **Notes:** Using `og:image:width` and `og:image:height` will specify the image dimensions to the crawler so that it can render the image immediately without having to asynchronously download and process it.
+> **Примечание:** Используйте `og:image:width` и `og:image:height` чтобы указать разрешение картинок для паука (the crawler) для того, чтобы картинки могли быть отрендерены сразу же. Иначе потребуется асинхронная подгрузка и обработка.
 
 ```html
 <meta property="og:type" content="website">
@@ -209,14 +209,14 @@
 <meta property="og:description" content="Description Here">
 <meta property="og:site_name" content="Site Name">
 <meta property="og:locale" content="en_US">
-<!-- Next tags are optional but recommended -->
+<!-- Следующие теги не обязательны, но рекомендованы -->
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 ```
 
 > * 📖 [A Guide to Sharing for Webmasters](https://developers.facebook.com/docs/sharing/webmasters/)
 > * 📖 [Best Practices - Sharing](https://developers.facebook.com/docs/sharing/best-practices/)
-> * 🛠 Test your page with the [Facebook OG testing](https://developers.facebook.com/tools/debug/)
+> * 🛠 Протестируйте страницу с [Facebook OG testing](https://developers.facebook.com/tools/debug/)
 
 * [ ] **Twitter Card:** ![Low][low_img]
 
@@ -231,9 +231,9 @@
 ```
 
 > * 📖 [Getting started with cards — Twitter Developers](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started)
-> * 🛠 Test your page with the [Twitter card validator](https://cards-dev.twitter.com/validator)
+> * 🛠 Проверьте страницу с [Twitter card validator](https://cards-dev.twitter.com/validator)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ наверх](#table-of-contents)**
 
 ---
 
