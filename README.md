@@ -162,13 +162,13 @@
 
 ### HTML теги
 
-* [ ] **Language attribute:** ![High][high_img] The `lang` attribute of your website is specified and related to the language of the current page.
+* [ ] **Атрибут lang:** ![High][high_img] Атрибут `lang` задан в соответствии с языком страницы.
 
 ```html
 <html lang="en">
 ```
 
-* [ ] **Direction attribute:** ![Medium][medium_img] The direction of lecture is specified on the html tag (It can be used on another HTML tag).
+* [ ] **Атрибут direction:** ![Medium][medium_img] Направление текста задано в этом атрибуте тега `html`. Также этот атрибут может быть применён к другим тегам.
 
 ```html
 <html dir="rtl">
@@ -176,22 +176,22 @@
 
 > * 📖 [dir - HTML - MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir)
 
-* [ ] **Alternate language:** ![Low][low_img] The language tag of your website is specified and related to the language of the current page.
+* [ ] **Альтернативный язык:** ![Low][low_img] Тег языка задан и соответствует языку страницы.
 
 ```html
 <link rel="alternate" href="https://es.example.com/" hreflang="es">
 ```
 
-* [ ] **Conditional comments:** ![Low][low_img] Conditional comments are present for IE if needed.
+* [ ] **Условные комментарии:** ![Low][low_img] Условные комментарии заданы для IE, если требуется.
 
 > * 📖 [About conditional comments (Internet Explorer) - MSDN - Microsoft](https://msdn.microsoft.com/en-us/library/ms537512(v=vs.85).aspx)
 
-* [ ] **RSS feed:** ![Low][low_img] If your project is a blog or has articles, an RSS link was provided.
+* [ ] **RSS feed:** ![Low][low_img] Если ваш проект является блогом или содержит страницы, убедитесь, что RSS настроен.
 
-* [ ] **Inline critical CSS:** ![Medium][medium_img] CSS which styles content that is immediately visible during pageload ("above the fold content") is called "critical CSS". It is embedded before your principal CSS call and between `<style></style>` in a single line (minified).
-> * 🛠 [Critical by Addy Osmani on GitHub](https://github.com/addyosmani/critical) automates this.
+* [ ] **Критичные CSS стили заданы inline:** ![Medium][medium_img] Критичный CSS (critical CSS) - CSS, задающий стили контента видимого сразу же пока идёт процесс загрузки страницы ("above the fold content"). Минифицируйте такой CSS и вставьте внутри `<style></style>` перед загрузкой остальных стилей.
+> * 🛠 Инструмент для автомизации: [Critical by Addy Osmani on GitHub](https://github.com/addyosmani/critical)
 
-* [ ] **CSS order:** ![High][high_img] All CSS files are loaded before any JavaScript files in the `<head>`. (Except the case where sometimes JS files are loaded asynchronously on top of your page).
+* [ ] **Порядок CSS:** ![High][high_img] Все CSS файлы должны загружаться перед любыми JavaScript файлами в `<head>`. (За исключением случаев, когда JS файлы загружаются асинхронно в верху страницы).
 
 ### Social meta
 
