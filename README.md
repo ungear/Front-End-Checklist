@@ -239,41 +239,41 @@
 
 ## HTML
 
-### Best practices
+### Лучшие практики
 
-* [ ] **HTML5 Semantic Elements:** ![High][high_img] HTML5 Semantic Elements are used appropriately (header, section, footer, main...).
+* [ ] **Семантические элементы HTML5:** ![High][high_img] Семантические элементы HTML5 используются должным образом (header, section, footer, main...).
 
 > * 📖 [HTML Reference](http://htmlreference.io/)
 
-* [ ] **Error pages:** ![High][high_img] Error 404 page and 5xx exist. Remember that the 5xx error pages need to have their CSS integrated (no external call on the current server).
+* [ ] **Страницы ошибок:** ![High][high_img] Страницы ошибок 404 и 5xx существуют. Не забывайте, что в страницы ошибок 5xx должны быть включены их стили, чтобы обойтись без подгрузки с сервера.
 
-* [ ] **Noopener:** ![Medium][medium_img] In case you are using external links with `target="_blank"`, your link should have a `rel="noopener"` attribute to prevent tab nabbing. If you need to support older versions of Firefox, use `rel="noopener noreferrer"`.
+* [ ] **Noopener:** ![Medium][medium_img] Ссылки на внешние ресурсы с `target="_blank"` должы иметь атрибут `rel="noopener"`, чтобы предотвратить фишинговые атаки типа tab nabbing. Если нужно поддерживать старие версии Firefox, используйте `rel="noopener noreferrer"`.
 
 > * 📖 [About rel=noopener](https://mathiasbynens.github.io/rel-noopener/)
 
-* [ ] **Clean up comments:** ![Low][low_img] Unnecessary code needs to be removed before sending the page to production.
+* [ ] **Удаление комментариев:** ![Low][low_img] Ненужный код должен быть удалён перед отправкой в production.
 
-### HTML testing
+### Тестирование HTML
 
-* [ ] **W3C compliant:** ![High][high_img] All pages need to be tested with the W3C validator to identify possible issues in the HTML code.
+* [ ] **W3C совместимость:** ![High][high_img] Все страницы должны быть проверены W3C валидатором.
 
 > * 🛠 [W3C validator](https://validator.w3.org/)
 
-* [ ] **HTML Lint:** ![High][high_img] I use tools to help me analyze any issues I could have on my HTML code.
+* [ ] **HTML Lint:** ![High][high_img] Инструменты, которые помогают анализировать проблены в HTML.
 
 > * 🛠 [Dirty markup](https://dirtymarkup.com/)
 
 > * 🛠 [Sonar a linting tool for the web](https://sonarwhal.com/)
 
-* [ ] **Link checker:** ![High][high_img] There are no broken links in my page, verify that you don't have any 404 error.
+* [ ] **Проверка ссылок:** ![High][high_img] Нет сломанных ссылок, нет ошибок 404.
 
 > * 🛠 [W3C Link Checker](https://validator.w3.org/checklink)
 
-* [ ] **Adblockers test:** ![Medium][medium_img] Your website shows your content correctly with adblockers enabled (You can provide a message encouraging people to disable their adblocker).
+* [ ] **Проверка на Adblock:** ![Medium][medium_img] Сайт коррекрно отображается в включёнными вырезателями рекламы типа Adblock. Можете показать специальное сообщение с просьбой выключить подобные плагины.
 
 
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ наверх](#table-of-contents)**
 
 ---
 
