@@ -269,7 +269,7 @@
 
 > * 🛠 [W3C Link Checker](https://validator.w3.org/checklink)
 
-* [ ] **Проверка на Adblock:** ![Medium][medium_img] Сайт коррекрно отображается в включёнными вырезателями рекламы типа Adblock. Можете показать специальное сообщение с просьбой выключить подобные плагины.
+* [ ] **Проверка на Adblock:** ![Medium][medium_img] Сайт коррекрно отображается c включёнными вырезателями рекламы типа Adblock. Можете показать специальное сообщение с просьбой выключить подобные плагины.
 
 
 
@@ -277,145 +277,145 @@
 
 ---
 
-## Webfonts
+## Web-шрифты
 
-> **Notes:** Using webfonts may cause Flash Of Unstyled Text/Flash Of Invisible Text - consider having fallback fonts and/or utilizing webfont loaders to control behavior.
+> **Примечание:** Использование web-шрифтов может вызвать мерцание или исчезновение текста (FOUT - Flash of Unstyled Text, FOIT - Flash of Invisible Text). Так что убедитесь, что задан резервный шрифт, либоо используйте загрузчик шрифтов чтобы держать ситуацию под контролем.
 > * 📖 [Google Technical considerations about webfonts](https://developers.google.com/fonts/docs/technical_considerations)
 
-* [ ] **Webfont format:** ![High][high_img] WOFF, WOFF2 and TTF are supported by all modern browsers.
+* [ ] **Форматы web-шрифтов:** ![High][high_img] WOFF, WOFF2 и TTF поддерживаются всеми браузерами.
 
 > * 📖 [WOFF - Web Open Font Format - Caniuse](https://caniuse.com/#feat=woff).
 > * 📖 [WOFF 2.0 - Web Open Font Format - Caniuse](https://caniuse.com/#feat=woff2).
 > * 📖 [TTF/OTF - TrueType and OpenType font support](https://caniuse.com/#feat=ttf)
 > * 📖 [Using @font-face - CSS-Tricks](https://css-tricks.com/snippets/css/using-font-face/)
 
-* [ ] **Webfont size:** ![High][high_img] Webfont sizes don't exceed 2 MB (all variants included).
+* [ ] **Размер web-шрифтов:** ![High][high_img] Размер шрифтов суммарно не превышает 2 MB.
 
-* [ ] **Webfont loader:** ![Low][low_img] Control loading behavior with a webfont loader
+* [ ] **Заргузчик web-шрифтов:** ![Low][low_img] Контролируйте закачку шрифтов с помощью загрузчика.
 
 > * 🛠 [Typekit Web Font Loader](https://github.com/typekit/webfontloader)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ наверх](#table-of-contents)**
 
 ---
 
 ## CSS
 
-> **Notes:** Take a look at [CSS guidelines](https://cssguidelin.es/) and [Sass Guidelines](https://sass-guidelin.es/) followed by most  Front-End developers. If you have a doubt about CSS properties, you can visit [CSS Reference](http://cssreference.io/). There is also a short [Code Guide](http://codeguide.co/) for consistency.
+> **Примечание:** Ознакомьтесь с [CSS guidelines](https://cssguidelin.es/) и [Sass Guidelines](https://sass-guidelin.es/), которых придерживаются большинство разработчиков. Если у вас есть сомнения насчёт CSS свойств, посетите [CSS Reference](http://cssreference.io/). Кроме того взгляните на короткий гайд [Code Guide](http://codeguide.co/).
 
-* [ ] **Responsive Web Design:** ![High][high_img] The website is using responsive web design.
-* [ ] **CSS Print:** ![Medium][medium_img] A print stylesheet is provided and is correct on each page.
-* [ ] **Preprocessors:** ![Low][low_img] Your page is using a CSS preprocessor ([Sass](http://sass-lang.com/) is preferred).
-* [ ] **Unique ID:** ![High][high_img] If IDs are used, they are unique to a page.
-* [ ] **Reset CSS:** ![High][high_img] A CSS reset (reset, normalize or reboot) is used and up to date. *(If you are using a CSS Framework like Bootstrap or Foundation, a Normalize is already included into it.)*
+* [ ] **Отзывчивый (responsive) веб-дизайн:** ![High][high_img] Дизайн должен быть отзывчивым.
+* [ ] **CSS для печати:** ![Medium][medium_img] Стили для печати заданы и работают корректны.
+* [ ] **Препоцессоры:** ![Low][low_img] Используются препроцессоры, [Sass](http://sass-lang.com/) рекомендуется.
+* [ ] **Уникальные ID:** ![High][high_img] Если используются Id, убедитесь, что они уникальны в пределах страницы.
+* [ ] **Сброс (reset) CSS:** ![High][high_img] Используются актуальные версии инструментов для нормализации CSS (reset, normalize or reboot). *(Если используете CSS фреймворк типа Bootstrap или Foundation, Normalize уже в них включён.)*
 
 > * 📖 [Reset.css](https://meyerweb.com/eric/tools/css/reset/)
 > * 📖 [Normalize.css](https://necolas.github.io/normalize.css/)
 > * 📖 [Reboot](https://getbootstrap.com/docs/4.0/content/reboot/)
 
-* [ ] **JS prefix:** ![Low][low_img] All classes (or id- used in JavaScript files) begin with **js-** and are not styled into the CSS files.
+* [ ] **JS префиксы:** ![Low][low_img] Все классы и id, используемые в JS файлах, начинаются с префикса **js-** и не учавствуют в назначении стилей.
 
 ```html
 <div id="js-slider" class="my-slider">
-<!-- Or -->
+<!-- Или -->
 <div id="id-used-by-cms" class="js-slider my-slider">
 ```
 
-* [ ] **Embedded or inline CSS:** ![High][high_img] Avoid at all cost embeding CSS in `<style>` tags or using inline CSS: only use for valid reasons (e.g. background-image for slider, critical CSS).
-* [ ] **Vendor prefixes:** ![High][high_img] CSS vendor prefixes are used and are generated accordingly with your browser support compatibility.
+* [ ] **Embedded или inline CSS:** ![High][high_img] Любой ценой избегайти внедрения CSS в `<style>` теги (embeding) или inline стилей. Применяйте такие подходы только в особых случаях, например background-image для слайдера или critical CSS (см. выше).
+* [ ] **Вендорные префиксы:** ![High][high_img] CSS вендорные префиксы используются и генерируются в соответствии с поддерживаемыми браузерами.
 
 > * 🛠 [Autoprefixer CSS online](https://autoprefixer.github.io/)
 
-### Performance
+### Производительность
 
-- [ ] **Concatenation:** ![High][high_img] CSS files are concatenated in a single file *(Not for HTTP/2)*.
-- [ ] **Minification:** ![High][high_img] All CSS files are minified.
-- [ ] **Non-blocking:** ![Medium][medium_img] CSS files need to be non-blocking to prevent the DOM from taking time to load.
+- [ ] **Конкатенация:** ![High][high_img] CSS фыйлы сконкатенированы в один файл *(Не для HTTP/2)*.
+- [ ] **Минификация:** ![High][high_img] Все CSS файлы минифицированы.
+- [ ] **Неблокирующий CSS:** ![Medium][medium_img] CSS файлы должны быть неблокирующими DOM, чтобы избежать потерь времени.
 
 > * 📖 [loadCSS by filament group](https://github.com/filamentgroup/loadCSS)
 > * 📖 [Example of preload CSS using loadCSS](https://gist.github.com/thedaviddias/c24763b82b9991e53928e66a0bafc9bf)
 
-- [ ] **Unused CSS:** ![Low][low_img] Remove unused CSS.
+- [ ] **Неиспользуемый CSS:** ![Low][low_img] Удалите неиспользуемые стили.
 
 > * 🛠 [UnCSS Online](https://uncss-online.com/) 🛠
 > * 🛠 [PurifyCSS](https://github.com/purifycss/purifycss)
 > * 🛠 [Chrome DevTools Coverage](https://developers.google.com/web/updates/2017/04/devtools-release-notes#coverage)
 
 
-### CSS testing
+### Тестирование CSS
 
-* [ ] **Stylelint:** ![High][high_img] All CSS or SCSS files are without any errors.
+* [ ] **Stylelint:** ![High][high_img] В CSS или SCSS файлах нет ошибок.
 
 > * 🛠 [stylelint, a CSS linter](https://stylelint.io/)
 > * 📖 [Sass guidelines](https://sass-guidelin.es/)
 
-* [ ] **Responsive web design:** ![High][high_img] All pages were tested at the following breakpoints: 320px, 768px, 1024px (can be more / different according to your analytics).
+* [ ] **Отзывчивый web-дизайн:** ![High][high_img] Все страницы были протестированы на следующих контрольных точках: 320px, 768px, 1024px (может быть больше а зависимости от проекта).
 
-* [ ] **CSS Validator:** ![Medium][medium_img] The CSS was tested and pertinent errors were corrected.
+* [ ] **CSS валидатор:** ![Medium][medium_img] CSS был протестирован, ошибки исправлены.
 
 > * 🛠 [CSS Validator](https://jigsaw.w3.org/css-validator/)
 
-* [ ] **Desktop Browsers:** ![High][high_img] All pages were tested on all current desktop browsers (Safari, Firefox, Chrome, Internet Explorer, EDGE...).
-* [ ] **Mobile Browsers:**  ![High][high_img] All pages were tested on all current mobile browsers (Native browser, Chrome, Safari...).
-* [ ] **OS:**  ![High][high_img] All pages were tested on all current OS (Windows, Android, iOS, Mac...).
+* [ ] **Desktop браузеры:** ![High][high_img] Все страницы были протестированы на всех поддерживаемых desktop браузерах (Safari, Firefox, Chrome, Internet Explorer, EDGE...).
+* [ ] **Мобильные браузеры:**  ![High][high_img] Все страницы были протестированы на всех поддерживаемых мобильных браузерах (Native browser, Chrome, Safari...).
+* [ ] **ОС:**  ![High][high_img] Все страницы были протестированы на всех поддерживаемых ОС (Windows, Android, iOS, Mac...).
 
-- [ ] **Pixel perfect:** ![High][high_img] Pages are close to pixel perfect. Depending on the quality of the creatives, you may not be 100% accurate, but your page needs to be close to your template.
+- [ ] **Pixel perfect:** ![High][high_img] Все страницы выполнены с пиксельной точностью. В зависимости от качества макета, вы можете не достигнуть 100% соответствия, но к этому нужно стремиться.
 
 > [Pixel Perfect - Chrome Extension](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en)
 
-* [ ] **Reading direction:** ![High][high_img] All pages need to be tested for LTR and RTL languages if they need to be supported.
+* [ ] **Направление текста:** ![High][high_img] Все страницы должны быть протестированы в LTR и RTL языках, если они поддерживаются.
 
 > * 📖 [Building RTL-Aware Web Apps & Websites: Part 1 - Mozilla Hacks](https://hacks.mozilla.org/2015/09/building-rtl-aware-web-apps-and-websites-part-1/)
 > * 📖 [Building RTL-Aware Web Apps & Websites: Part 2 - Mozilla Hacks](https://hacks.mozilla.org/2015/10/building-rtl-aware-web-apps-websites-part-2/)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ наверх](#table-of-contents)**
 
 ---
 
-## Images
+## Картинки
 
-> **Notes:** For a complete understanding of image optimization, check the free ebook **[Essential Image Optimization](https://images.guide/)** from Addy Osmani.
+> **Примечание:** Для полного понимания оптимизации картинок прочтимте бесплатную электронную книгу **[Essential Image Optimization](https://images.guide/)** от Addy Osmani.
 
-### Best practices
+### Лучшие практики
 
-* [ ] **Optimization:** ![High][high_img] All images are optimized to be rendered in the browser. WebP format could be used for critical pages (like Homepage).
+* [ ] **Оптимизация:** ![High][high_img] Все картинки оптимизированы для рендеринга в браузере. Формат WebP может быть использован для критических страниц, например домашняя страница (Homepage).
 
 > * 🛠 [Imagemin](https://github.com/imagemin/imagemin)
-> * 🛠 Use [ImageOptim](https://imageoptim.com/) to optimise your images for free.
-> * 🛠 Use [Kraken.io](https://kraken.io/web-interface) awesome alternative for both png and jpg optimization. Up to 1mb per files on free plan.
+> * 🛠 Используйти [ImageOptim](https://imageoptim.com/) для бесплатной оптимизации картинок.
+> * 🛠 Используйте [Kraken.io](https://kraken.io/web-interface) как крутую альтернативу для оптимизации png и jpg. До 1 Mb бесплатно.
 
-* [ ] **Picture/Srcset:** ![Medium][medium_img] You use picture/srcset to provide the most appropriate image for the current viewport of the user.
+* [ ] **Picture/Srcset:** ![Medium][medium_img] Используйте picture/srcset чтобы задать наиболее подходящую картинку для текущего viewport.
 
 > * 📖 [How to Build Responsive Images with srcset](https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/)
 
-* [ ] **Retina:** ![Low][low_img] You provide layout images 2x or 3x, support retina display.
-* [ ] **Sprite:** ![Medium][medium_img] Small images are in a sprite file (in the case of icons, they can be in an SVG sprite image).
-* [ ] **Width and Height:** ![High][high_img] Set `width` and `height` attributes on `<img>` if the final rendered image size is known (can be omitted for CSS sizing).
-* [ ] **Alternative text:** ![High][high_img] All `<img>` have an alternative text which describe the image visually.
+* [ ] **Retina:** ![Low][low_img] Вы используете картинки большего размера 2x или 3x для поддержки дисплеев retina.
+* [ ] **Спрайты:** ![Medium][medium_img] Мелкие картинки объединены в спрайт файл. В случае иконок это может быть SVG файл.
+* [ ] **Width и Height:** ![High][high_img] Задайте атрибуты `width` и `height` для `<img>` если размеры картинки заранее известны. Может быть пропущен для задания размеров через CSS.
+* [ ] **Альтернативный текст:** ![High][high_img] Для всех `<img>` задан альтернативный текст, который описывает картинку.
 
 > * 📖 [Alt-texts: The Ultimate Guide](https://axesslab.com/alt-texts/)
 
-* [ ] **Lazy loading:** ![Medium][medium_img] Images are lazyloaded (A noscript fallback is always provided).
+* [ ] **Ленивая загрузка (lazy loading):** ![Medium][medium_img] Применяется lazy loading для картинок (задан резервный noscript).
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ наверх](#table-of-contents)**
 
 ---
 
 ## JavaScript
 
-### Best practices
+### Лучшие практики
 
-* [ ] **JavaScript Inline:** ![High][high_img] You don't have any JavaScript code inline (mixed with your HTML code).
-* [ ] **Concatenation:** ![High][high_img] JavaScript files are concatenated.
-* [ ] **Minification:** ![High][high_img] JavaScript files are minified (you can add the `.min` suffix).
+* [ ] **JavaScript Inline:** ![High][high_img] Не используется inline JavaScript (смешанный с HTML).
+* [ ] **Конкатенация:** ![High][high_img] JavaScript файлы сконкатенированы в один.
+* [ ] **Минификация:** ![High][high_img] JavaScript файлы минифицированы. Можете добавить суффикс `.min`.
 
 > * 📖 [Minify Resources (HTML, CSS, and JavaScript)](https://developers.google.com/speed/docs/insights/MinifyResources)
 
-* [ ] **JavaScript security:**
+* [ ] **Безопасность JavaScript:**
 
 > * 📖 [Guidelines for Developing Secure Applications Utilizing JavaScript](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet#Guidelines_for_Developing_Secure_Applications_Utilizing_JavaScript)
 
-* [ ] **Non-blocking:** ![Medium][medium_img] JavaScript files are loaded asynchronously using `async` or deferred using `defer` attribute.
+* [ ] **Неблокирующий JS:** ![Medium][medium_img] JavaScript файлы загружаются астнхрогго с использованием `async` или отложенно с `defer` аорибутом.
 
 > * 📖 [Remove Render-Blocking JavaScript](https://developers.google.com/speed/docs/insights/BlockingJS)
 
@@ -429,7 +429,7 @@
 
 > * 📖 [ESLint - The pluggable linting utility for JavaScript and JSX](https://eslint.org/)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ наверх](#table-of-contents)**
 
 ---
 
@@ -479,7 +479,7 @@
 > * 📖 [CSP Cheat Sheet - Scott Helme](https://scotthelme.co.uk/csp-cheat-sheet/)
 > * 📖 [CSP Cheat Sheet - OWASP](https://www.owasp.org/index.php/Content_Security_Policy_Cheat_Sheet)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ наверх](#table-of-contents)**
 
 ---
 
@@ -546,13 +546,13 @@
 > * 🛠 [WebPagetest - Website Performance and Optimization Test](https://www.webpagetest.org/)
 > * 🛠 [GTmetrix - Website speed and performance optimization](https://gtmetrix.com/)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ наверх](#table-of-contents)**
 
 ---
 
 ## Accessibility
 
-> **Notes:** You can watch the playlist [A11ycasts with Rob Dodson](https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g) 📹
+> **Примечание:** You can watch the playlist [A11ycasts with Rob Dodson](https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g) 📹
 
 ### Best practices
 
@@ -604,7 +604,7 @@
 
 > * 📹 [Managing Focus - A11ycasts #22](https://www.youtube.com/watch?v=srLRSQg6Jgg&index=5&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ наверх](#table-of-contents)**
 
 ---
 
@@ -628,7 +628,7 @@
 > * 📖 [Sitemap guidelines - Google Support](https://support.google.com/webmasters/answer/183668?hl=en)
 > * 🛠 [Sitemap generator](https://websiteseochecker.com/html-sitemap-generator/)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ наверх](#table-of-contents)**
 
 ---
 
@@ -656,7 +656,7 @@ If you want to show you are following the rules of the Front-End Checklist, put 
 [![Front‑End_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/thedaviddias/Front-End-Checklist/)
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ наверх](#table-of-contents)**
 
 ---
 
@@ -696,7 +696,7 @@ If you have any question or suggestion, don't hesitate to use Gitter or Twitter:
 
 [![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ наверх](#table-of-contents)**
 
 [low_img]: http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png
 [medium_img]: http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png
