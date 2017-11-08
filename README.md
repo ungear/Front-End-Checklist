@@ -17,13 +17,13 @@
 
 1. **[Head](#head)**
 2. **[HTML](#html)**
-3. **[Webfonts](#webfonts)**
+3. **[Web-шрифты](#web-шрифты)**
 4. **[CSS](#css)**
-5. **[Картинки](#images)**
+5. **[Картинки](#Картинки)**
 6. **[JavaScript](#javascript)**
-7. **[Безопасность](#security)**
-8. **[Производительность](#performance-1)**
-9. **[Доступность](#accessibility)**
+7. **[Безопасность](#Безопасность)**
+8. **[Производительность](#Производительность)**
+9. **[Доступность](#Доступность)**
 10. **[SEO](#seo)**
 
 ## Как этим пользоваться?
@@ -233,7 +233,7 @@
 > * 📖 [Getting started with cards — Twitter Developers](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started)
 > * 🛠 Проверьте страницу с [Twitter card validator](https://cards-dev.twitter.com/validator)
 
-**[⬆ наверх](#table-of-contents)**
+**[⬆ наверх](#Содержание)**
 
 ---
 
@@ -273,7 +273,7 @@
 
 
 
-**[⬆ наверх](#table-of-contents)**
+**[⬆ наверх](#Содержание)**
 
 ---
 
@@ -295,7 +295,7 @@
 
 > * 🛠 [Typekit Web Font Loader](https://github.com/typekit/webfontloader)
 
-**[⬆ наверх](#table-of-contents)**
+**[⬆ наверх](#Содержание)**
 
 ---
 
@@ -326,7 +326,7 @@
 
 > * 🛠 [Autoprefixer CSS online](https://autoprefixer.github.io/)
 
-### Производительность
+### Производительность CSS
 
 - [ ] **Конкатенация:** ![High][high_img] CSS фыйлы сконкатенированы в один файл *(Не для HTTP/2)*.
 - [ ] **Минификация:** ![High][high_img] Все CSS файлы минифицированы.
@@ -368,7 +368,7 @@
 > * 📖 [Building RTL-Aware Web Apps & Websites: Part 1 - Mozilla Hacks](https://hacks.mozilla.org/2015/09/building-rtl-aware-web-apps-and-websites-part-1/)
 > * 📖 [Building RTL-Aware Web Apps & Websites: Part 2 - Mozilla Hacks](https://hacks.mozilla.org/2015/10/building-rtl-aware-web-apps-websites-part-2/)
 
-**[⬆ наверх](#table-of-contents)**
+**[⬆ наверх](#Содержание)**
 
 ---
 
@@ -397,7 +397,7 @@
 
 * [ ] **Ленивая загрузка (lazy loading):** ![Medium][medium_img] Применяется lazy loading для картинок (задан резервный noscript).
 
-**[⬆ наверх](#table-of-contents)**
+**[⬆ наверх](#Содержание)**
 
 ---
 
@@ -429,7 +429,7 @@
 
 > * 📖 [ESLint - The pluggable linting utility for JavaScript and JSX](https://eslint.org/)
 
-**[⬆ наверх](#table-of-contents)**
+**[⬆ наверх](#Содержание)**
 
 ---
 
@@ -479,7 +479,7 @@
 > * 📖 [CSP Cheat Sheet - Scott Helme](https://scotthelme.co.uk/csp-cheat-sheet/)
 > * 📖 [CSP Cheat Sheet - OWASP](https://www.owasp.org/index.php/Content_Security_Policy_Cheat_Sheet)
 
-**[⬆ наверх](#table-of-contents)**
+**[⬆ наверх](#Содержание)**
 
 ---
 
@@ -546,7 +546,7 @@
 > * 🛠 [WebPagetest - Website Performance and Optimization Test](https://www.webpagetest.org/)
 > * 🛠 [GTmetrix - Website speed and performance optimization](https://gtmetrix.com/)
 
-**[⬆ наверх](#table-of-contents)**
+**[⬆ наверх](#Содержание)**
 
 ---
 
@@ -604,7 +604,7 @@
 
 > * 📹 [Managing Focus - A11ycasts #22](https://www.youtube.com/watch?v=srLRSQg6Jgg&index=5&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 
-**[⬆ наверх](#table-of-contents)**
+**[⬆ наверх](#Содержание)**
 
 ---
 
@@ -628,7 +628,7 @@
 > * 📖 [Sitemap guidelines - Google Support](https://support.google.com/webmasters/answer/183668?hl=en)
 > * 🛠 [Sitemap generator](https://websiteseochecker.com/html-sitemap-generator/)
 
-**[⬆ наверх](#table-of-contents)**
+**[⬆ наверх](#Содержание)**
 
 ---
 
@@ -657,7 +657,7 @@ Front-End Checklist также доступен на других языках. 
 [![Front‑End_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/thedaviddias/Front-End-Checklist/)
 ```
 
-**[⬆ наверх](#table-of-contents)**
+**[⬆ наверх](#Содержание)**
 
 ---
 
@@ -697,7 +697,7 @@ Front-End Checklist также доступен на других языках. 
 
 [![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-**[⬆ наверх](#table-of-contents)**
+**[⬆ наверх](#Содержание)**
 
 [low_img]: http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png
 [medium_img]: http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png
