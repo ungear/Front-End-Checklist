@@ -23,7 +23,7 @@
 6. **[JavaScript](#javascript)**
 7. **[Безопасность](#security)**
 8. **[Производительность](#performance-1)**
-9. **[Доступ](#accessibility)**
+9. **[Доступность](#accessibility)**
 10. **[SEO](#seo)**
 
 ## Как этим пользоваться?
@@ -415,17 +415,17 @@
 
 > * 📖 [Guidelines for Developing Secure Applications Utilizing JavaScript](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet#Guidelines_for_Developing_Secure_Applications_Utilizing_JavaScript)
 
-* [ ] **Неблокирующий JS:** ![Medium][medium_img] JavaScript файлы загружаются астнхрогго с использованием `async` или отложенно с `defer` аорибутом.
+* [ ] **Неблокирующий JS:** ![Medium][medium_img] JavaScript файлы загружаются асинхронно с  использованием атрибута `async` или отложенно с `defer`.
 
 > * 📖 [Remove Render-Blocking JavaScript](https://developers.google.com/speed/docs/insights/BlockingJS)
 
-* [ ] **Modernizr:** ![Low][low_img] If you need to target some specific features you can use a custom Modernizr to add classes in your `<html>` tag.
+* [ ] **Modernizr:** ![Low][low_img] С помощью кастомного Modernizr можно добавлять классы к `<html>`.
 
 > * 🛠 [Customize your Modernizr](https://modernizr.com/download?setclasses)
 
-### JavaScript testing
+### Тестирование JavaScript
 
-* [ ] **ESLint:** ![High][high_img] No errors are flagged by ESLint (based on your configuration or standards rules).
+* [ ] **ESLint:** ![High][high_img] ESLint не выдал ошибок, проверяя ваш код. Можно использовать ваш собственный конфиг, или стандартные правила.
 
 > * 📖 [ESLint - The pluggable linting utility for JavaScript and JSX](https://eslint.org/)
 
@@ -433,47 +433,47 @@
 
 ---
 
-## Security
+## Безопасность
 
-### Scan and check your web site
+### Просканируйте и проверьте ваш веб-сайт
 
 > * [securityheaders.io](https://securityheaders.io/)
 > * [Observatory by Mozilla](https://observatory.mozilla.org/)
 > * [ASafaWeb - Automated Security Analyser for ASP.NET Websites](https://asafaweb.com/)
 
-### Best practices
+### Лучшие практики
 
-* [ ] **HTTPS:** ![Medium][medium_img] HTTPS is used on every pages and for all external content (plugins, images...).
+* [ ] **HTTPS:** ![Medium][medium_img] HTTPS используется на всех страницах, а также для всего стороннего контента (плагины, картинки...).
 
 > * 🛠 [Let's Encrypt - Free SSL/TLS Certificates](https://letsencrypt.org/)
 > * 🛠 [Free SSL Server Test](https://www.ssllabs.com/ssltest/index.html)
 > * 📖 [Strict Transport Security](http://caniuse.com/#feat=stricttransportsecurity)
 
-* [ ] **HTTP Strict Transport Security (HSTS):** ![Medium][medium_img] The HTTP header is set to 'Strict-Transport-Security'.
+* [ ] **HTTP Strict Transport Security (HSTS):** ![Medium][medium_img] Выставлен HTTP заголовок 'Strict-Transport-Security'.
 
 > * 🛠 [Check HSTS preload status and eligibility](https://hstspreload.org/)
 > * 📖 [HTTP Strict Transport Security Cheat Sheet - OWASP](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
 > * 📖 [Transport Layer Protection Cheat Sheet - OWASP](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
 
-* [ ] **Cross Site Request Forgery (CSRF):** ![High][high_img] You ensure that requests made to your server-side are legitimate and originate from your website / app to prevent CSRF attacks.
+* [ ] **Защита от фальсификации межсайтовых запросов(Cross Site Request Forgery - CSRF):** ![High][high_img] Вы гарантируете, что запросы на ваш сервер делаются именно вашим веб-сайтом, чтобы избежать атак CSRF.
 
 > * 📖 [Cross-Site Request Forgery (CSRF) Prevention Cheat Sheet  - OWASP](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet)
 
-* [ ] **Cross Site Scripting (XSS):** ![High][high_img] Your page or website is free from XSS possible issues.
+* [ ] **Межсайтовый скриптинг (Cross Site Scripting - XSS):** ![High][high_img] Ваш веб-сайт защищён от уязвимостей XSS.
 
 > * 📖 [XSS (Cross Site Scripting) Prevention Cheat Sheet  - OWASP](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
 > * 📖 [DOM based XSS Prevention Cheat Sheet  - OWASP](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
 
-* [ ] **Content Type Options** ![Medium][medium_img] Prevents Google Chrome and Internet Explorer from trying to mime-sniff the content-type of a response away from the one being declared by the server.
+* [ ] **Заголовок Content-Type** ![Medium][medium_img] Предотвратить mime-sniff (анализ контента и подмена заголовка content-type) в Google Chrome и Internet Explorer.
 
 > * 📖 [X-Content-Type-Options - Scott Helme](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-content-type-options)
 
-* [ ] **X-Frame-Options (XFO)** ![Medium][medium_img] Protects your visitors against clickjacking attacks.
+* [ ] **X-Frame-Options (XFO)** ![Medium][medium_img] Защитите своих пользователей от атак типа clickjacking.
 
 > * 📖 [X-Frame-Options - Scott Helme](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-frame-options)
 > * 📖 [RFC7034 - HTTP Header Field X-Frame-Options](https://tools.ietf.org/html/rfc7034)
 
-* [ ] **Content Security Policy** ![Medium][medium_img] Defines how content is loaded on your site and from where it is permitted to be loaded. Can also be used to protect against clickjacking attacks.
+* [ ] **Политика безопасности контента (Content Security Policy)** ![Medium][medium_img] Задайте правила, определующие, какой контент и откуда разрешено загружать на ваш сайт. Также это поможет защититься против атак clickjacking.
 
 > * 📖 [Content Security Policy - An Introduction - Scott Helme](https://scotthelme.co.uk/content-security-policy-an-introduction/)
 > * 📖 [CSP Cheat Sheet - Scott Helme](https://scotthelme.co.uk/csp-cheat-sheet/)
@@ -483,53 +483,53 @@
 
 ---
 
-## Performance
+## Производительность
 
-### Best practices
+### Лучшие практики
 
-- [ ] **Page weight:** ![High][high_img] The weight of each page is between 0 and 500 KB.
+- [ ] **Вес страницы:** ![High][high_img] Вес каждой страницы должен быть от 0 до 500 KB.
 
 > * 🛠 [Website Page Analysis](https://tools.pingdom.com)
 > * 📖 [Size Limit: Make the Web lighter](https://evilmartians.com/chronicles/size-limit-make-the-web-lighter)
 
-- [ ] **Minified:** ![Medium][medium_img] Your HTML is minified.
+- [ ] **Минифицирование:** ![Medium][medium_img] Ваш HTML минифицирован.
 > * 🛠 [W3C Validator](https://validator.w3.org/)
 
-* [ ] **Lazy loading:** ![Medium][medium_img] Images, scripts and CSS need to be lazy loaded to improve the response time of the current page (See details in their respective sections).
+* [ ] **Ленивая загрузка (Lazy loading):** ![Medium][medium_img] Используйте lazy loading для загрузки картинок, скриптов и CSS чтобы уменьшить время инициализации страницы. Смотрите подробнее в соответствиющих секция чеклиста.
 
-* [ ] **Cookie size:** If you are using cookies be sure each cookie doesn't exceed 4096 bytes and your domain name doesn't have more than 20 cookies.
+* [ ] **Размер cookie:** Если используете cookies, убедитесь, что из расмер не превосходит 4096 байт. Также один домен не должен использовать более 20 cookies.
 
 > * 📖 [Cookie specification: RFC 6265](https://tools.ietf.org/html/rfc6265)
 > * 📖 [Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
 > * 🛠 [Browser Cookie Limits](http://browsercookielimits.squawky.net/)
 
-* [ ] **Third party components:** ![Medium][medium_img] Third party iframes or components relying on external JS (like sharing buttons) are replaced by static components when possible, thus limiting calls to external APIs and keeping your users activity private.
+* [ ] **Сторонние компонены (Third party components):** ![Medium][medium_img] Iframe и сторонние компоненты, полагающиеся на JS с других доменов (типа кнопок "Поделиться"), должны быть, по возможности, заменены на ваши статические компоненты дабы уменьшить число запросов и избежать возможной утечки данных ваших пользователей.
 
 > * 🛠 [Simple sharing buttons generator](https://simplesharingbuttons.com/)
 
-### Preparing upcoming requests
+### Подготовка предстоящих запросов (preparing upcoming requests)
 
 > * 📖 [Explanation of the following techniques](https://css-tricks.com/prefetching-preloading-prebrowsing/)
 
-* [ ] **DNS resolution:** ![Low][low_img] DNS of third-party services that may be needed are resolved in advance during idle time using `dns-prefetch`.
+* [ ] **DNS resolution:** ![Low][low_img] DNS сторонних компонентов обозначены в `dns-prefetch`, чтобы браузер мог разобраться с этими DNS заранее.
 
 ```html
 <link rel="dns-prefetch" href="https://example.com">
 ```
 
-* [ ] **Preconnection:** ![Low][low_img] DNS lookup, TCP handshake and TLS negotiation with services that will be needed soon is done in advance during idle time using `preconnect`.
+* [ ] **Preconnect:** ![Low][low_img] Используйте `preconnect`, чтобы браузер мог осуществить DNS lookup, TCP handshake и TLS negotiation заранее во время простоя браузера.
 
 ```html
 <link rel="preconnect" href="https://example.com">
 ```
 
-* [ ] **Prefetching:** ![Low][low_img] Resources that will be needed soon (e.g. lazy loaded images) are requested in advance during idle time using `prefetch`.
+* [ ] **Prefetch:** ![Low][low_img] С использованием `prefetch` ресурсы, которые скоро могут понадобиться, например картинки с lazy loading, будут подгружены заранее во время простоя браузера.
 
 ```html
 <link rel="prefetch" href="image.png">
 ```
 
-* [ ] **Preloading:** ![Low][low_img] Resources needed in the current page (e.g. scripts placed at the end of `<body>`) in advance using `preload`.
+* [ ] **Preload:** ![Low][low_img] `preload` заранее загружает ресурсы, требуемые для текущей страницы, например скрипты в конце `<body>`.
 
 ```html
 <link rel="preload" href="app.js">
@@ -537,9 +537,9 @@
 
 > * 📖 [Difference between prefetch and preload](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf)
 
-### Performance testing
+### Тестирование производительности
 
-* [ ] **Google PageSpeed:** ![High][high_img] All your pages were tested (not only the homepage) and have a score of at least 90/100.
+* [ ] **Google PageSpeed:** ![High][high_img] Все страницы протестированы и имеют рейтинг хотя бы 90/100.
 
 > * 🛠 [Google PageSpeed](https://developers.google.com/speed/pagespeed/insights/)
 > * 🛠 [Test your mobile speed with Google](https://testmysite.withgoogle.com)
@@ -550,57 +550,57 @@
 
 ---
 
-## Accessibility
+## Доступность
 
-> **Примечание:** You can watch the playlist [A11ycasts with Rob Dodson](https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g) 📹
+> **Примечание:** Ознакомьтесь с плейлистом [A11ycasts with Rob Dodson](https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g) 📹
 
-### Best practices
+### Лучшие практики
 
-- [ ] **Progressive enhancement:** ![Medium][medium_img] Major functionality like main navigation and search should work without JavaScript enabled.
+- [ ] **Прогрессивное улучшение:** ![Medium][medium_img] Основной функционал, например навигация и поиск, должны работать даже если JavaScript выключен.
 
 > * 📖 [Enable / Disable JavaScript in Chrome Developer Tools](https://www.youtube.com/watch?v=kBmvq2cE0D8)
 
-- [ ] **Color contrast:** ![Medium][medium_img] Color contrast should at least pass WCAG AA (AAA for mobile).
+- [ ] **Контрастность цветов:** ![Medium][medium_img] Контрастность должна соответствовать WCAG AA (AAA для мобильных устройств).
 
 > * 🛠 [Contrast ratio](https://leaverou.github.io/contrast-ratio/)
 
-#### Headings
+#### Заголовки
 
-* [ ] **H1:** ![High][high_img] All pages have an H1 which is not the title of the website.
-* [ ] **Headings:** ![High][high_img] Headings should be used properly in the right order (H1 to H6).
+* [ ] **H1:** ![High][high_img] На всех страницах есть H1, который отличается от title страницы.
+* [ ] **Заголовки:** ![High][high_img] Заголовки олжны идти в правильном порядке (от H1 к H6).
 
 > * 📹 [Why headings and landmarks are so important -- A11ycasts #18](https://www.youtube.com/watch?v=vAAzdi1xuUY&index=9&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 
-#### Landmarks
+#### ARIA landmarks
 
-- [ ] **Role banner:** ![High][high_img] `<header>` has `role="banner"`.
-- [ ] **Role navigation:** ![High][high_img] `<nav>` has `role="navigation"`.
-- [ ] **Role main:** ![High][high_img] `<main>` has `role="main"`.
+- [ ] **Role banner:** ![High][high_img] У `<header>` проставлен `role="banner"`.
+- [ ] **Role navigation:** ![High][high_img] у `<nav>` проставлен `role="navigation"`.
+- [ ] **Role main:** ![High][high_img] У `<main>` проставлен `role="main"`.
 
 > * 📖 [Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/GL/wiki/Using_ARIA_landmarks_to_identify_regions_of_a_page)
 > * 📖 [ARIA roles categorization](https://www.w3.org/TR/wai-aria/roles#roles_categorization)
 
-### Semantics
+### Семантика
 
-- [ ] **Specific HTML5 input types are used:** ![Medium][medium_img] This is especially important for mobile devices that show customized keypads and widgets for different types.
+- [ ] **Специальные типы input для HTML5:** ![Medium][medium_img] Это особенно важно для мобильных устройств, т.к. там используется разные клавиатуры для разных типов вводимых данных.
 
 > * 📖 [Mobile Input Types](http://mobileinputtypes.com/)
 
-### Form
+### Формы
 
-* [ ] **Label:** ![High][high_img] A label is associated with each input form element. In case a label can't be displayed, use `aria-label` instead.
+* [ ] **Label:** ![High][high_img] `<label>` задан для каждого элемента формы. Если его применить нельзя, используйте `aria-label`.
 
 > * 📖 [Using the aria-label attribute - MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute)
 
-### Accessibility testing
+### Тестирование доступности
 
-* [ ] **Accessibility standards testing:** ![High][high_img] Use the WAVE tool to test if your page respects the accessibility standards.
+* [ ] **Проверка на соответствие стандартам:** ![High][high_img] Используйте инструмент WAVE для проверки.
 
 > * 🛠 [Wave testing](http://wave.webaim.org/)
 
-* [ ] **Keyboard navigation:** ![High][high_img] Test your website using only your keyboard in a previsible order. All interactive elements are reachable and usable.
-* [ ] **Screen-reader:** ![Medium][medium_img] All pages were tested in a screen-reader (VoiceOver, ChromeVox, NVDA or Lynx).
-* [ ] **Focus style:** ![High][high_img] If the focus is disabled, it is replaced by visible state in CSS.
+* [ ] **Клавиатурная навигация:** ![High][high_img] Пройдитесь по вашему сайту, используя только клавиатуру. Все интерактивные элементы должны быть доступны.
+* [ ] **Screen-reader:** ![Medium][medium_img] Проверьте все страницы в программах для чтения экрана (screen-reader) таких как VoiceOver, ChromeVox, NVDA или Lynx.
+* [ ] **Стили для фокуса:** ![High][high_img] Если фокус запрещён, к элементу под фокусом должны применяться специальные стили.
 
 > * 📹 [Managing Focus - A11ycasts #22](https://www.youtube.com/watch?v=srLRSQg6Jgg&index=5&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 
@@ -610,20 +610,20 @@
 
 ## SEO
 
-* [ ] **Google Analytics:** ![High][high_img] Google Analytics is installed and correctly configured.
-* [ ] **Headings logic:** ![Medium][medium_img] Heading text helps to understand the content in the current page.
-* [ ] **sitemap.xml:** ![High][high_img] A sitemap.xml exists and was submitted to Google Search Console (previously Google Webmaster Tools).
-* [ ] **robots.txt:** ![High][high_img] The robots.txt is not blocking webpages.
+* [ ] **Google Analytics:** ![High][high_img] Google Analytics установлен и настроен.
+* [ ] **Логицные заголовки:** ![Medium][medium_img] Текст заголовков помогает понять контент страницы.
+* [ ] **sitemap.xml:** ![High][high_img] sitemap.xml существует и задан в Google Search Console (ранее Google Webmaster Tools).
+* [ ] **robots.txt:** ![High][high_img] robots.txt не блокирует страницы.
 
-> * 🛠 Test your robots.txt with [Google Robots Testing Tool](https://www.google.com/webmasters/tools/robots-testing-tool)
+> * 🛠 Проверьте robots.txt с [Google Robots Testing Tool](https://www.google.com/webmasters/tools/robots-testing-tool)
 
-* [ ] **Structured Data:** ![High][high_img] Pages using structured data are tested and are without errors. Structured data helps crawlers understand the content in the current page.
+* [ ] **Структурированные данные (Structured Data):** ![High][high_img] На страницах используются проверенные и правильные стркутирированные данные. Они помогают паукам (crawlers) понять контент страницы.
 
 > * 📖 [Introduction to Structured Data - Search - Google Developers](https://developers.google.com/search/docs/guides/intro-structured-data)
-> * 🛠 Test your page with the [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)
-> * 🛠 Complete list of vocabularies that can be used as structured data. [Schema.org Full Heirarchy](http://schema.org/docs/full.html)
+> * 🛠 Проверьте свою страницу с [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)
+> * 🛠 Польный список слов, используемых в структурированных данных [Schema.org Full Heirarchy](http://schema.org/docs/full.html)
 
-* [ ] **Sitemap HTML:** ![Medium][medium_img] An HTML sitemap is provided and is accessible via a link in the footer of your website.
+* [ ] **HTML карта сайта:** ![Medium][medium_img] HTML карта сайта существует и доступна по ссылке в подвале страницы.
 
 > * 📖 [Sitemap guidelines - Google Support](https://support.google.com/webmasters/answer/183668?hl=en)
 > * 🛠 [Sitemap generator](https://websiteseochecker.com/html-sitemap-generator/)
@@ -632,24 +632,24 @@
 
 ---
 
-## Translation
+## Перевод
 
-The Front-End Checklist is also available in other languages. Thanks for all translators and their awesome work!
+Front-End Checklist также доступен на других языках. Спасибо всем переводчикам за потрясающую работу!
 
-* 🇯🇵 Japanese: [miya0001/Front-End-Checklist](https://github.com/miya0001/Front-End-Checklist)
-* 🇪🇸 Spanish: [eoasakura/Front-End-Checklist-ES](https://github.com/eoasakura/Front-End-Checklist-ES)
-* 🇨🇳 Chinese: [JohnsenZhou/Front-End-Checklist](https://github.com/JohnsenZhou/Front-End-Checklist)
-* 🇰🇷 Korean: [kesuskim/Front-End-Checklist](https://github.com/kesuskim/Front-End-Checklist)
-* 🇧🇷 Portuguese: [jcezarms/Front-End-Checklist](https://github.com/jcezarms/Front-End-Checklist)
-* 🇻🇳 Vietnamese: [euclid1990/Front-End-Checklist](https://github.com/euclid1990/Front-End-Checklist)
-* 🇹🇼 Traditional Chinese: [EngineLin/Front-End-Checklist](https://github.com/EngineLin/Front-End-Checklist)
-* 🇫🇷 French: [ynizon/Front-End-Checklist](https://github.com/ynizon/Front-End-Checklist)
+* 🇯🇵 Японский: [miya0001/Front-End-Checklist](https://github.com/miya0001/Front-End-Checklist)
+* 🇪🇸 Испанский: [eoasakura/Front-End-Checklist-ES](https://github.com/eoasakura/Front-End-Checklist-ES)
+* 🇨🇳 Китайский: [JohnsenZhou/Front-End-Checklist](https://github.com/JohnsenZhou/Front-End-Checklist)
+* 🇰🇷 Корейский: [kesuskim/Front-End-Checklist](https://github.com/kesuskim/Front-End-Checklist)
+* 🇧🇷 Португальский: [jcezarms/Front-End-Checklist](https://github.com/jcezarms/Front-End-Checklist)
+* 🇻🇳 Вьетнамский: [euclid1990/Front-End-Checklist](https://github.com/euclid1990/Front-End-Checklist)
+* 🇹🇼 Традиционный китайский: [EngineLin/Front-End-Checklist](https://github.com/EngineLin/Front-End-Checklist)
+* 🇫🇷 Французский: [ynizon/Front-End-Checklist](https://github.com/ynizon/Front-End-Checklist)
 
 ---
 
 ## Front-End Checklist Badge
 
-If you want to show you are following the rules of the Front-End Checklist, put this badge on your README file!
+Вставьте этот бейдж в ваш файл README, если хотите показать, что следуете этому чеклисту!
 
 ➔ [![Front‑End_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/thedaviddias/Front-End-Checklist/)
 
@@ -661,39 +661,39 @@ If you want to show you are following the rules of the Front-End Checklist, put 
 
 ---
 
-## Contributing
+## Содействие
 
-**Open an issue or a pull request to suggest changes or additions.**
+**Создайте issue или pull request чтобы предложить изменение или дополнение**
 
-### Guide
+### Руководство
 
-The **Front-End Checklist** repository consists of two branches:
+Репозиторий **Front-End Checklist** состоит из двух веток:
 
 #### 1. `master`
 
-This branch consists of the `README.md` file that is automatically reflected on the [Front-End Checklist](http://frontendchecklist.com/) website.
+Эта ветка состоит из файла `README.md`, который автоматически отображается на сайте [Front-End Checklist](http://frontendchecklist.com/).
 
 #### 2. `develop`
 
-This branch will be used to make some significant changes to the structure, content if needed. It is preferable to use the master branch to fix small errors or add a new item.
+Эта ветка будет использоваться для внесения значительных изменений в структуру или контент. Для устранения мелких ошибок и создания новых элементов предпочтительно использовать ветку master.
 
-### Contributors
+### Помощники
 
-Check out all the super awesome [contributors](https://github.com/thedaviddias/frontendchecklist/graphs/contributors).
+Зацените невероятно крутых помощников [contributors](https://github.com/thedaviddias/frontendchecklist/graphs/contributors).
 
-## Support
+## Поддержка
 
-If you have any question or suggestion, don't hesitate to use Gitter or Twitter:
+Если у вас есть вопросы или пожелания, без колебаний пишите в Gitter или Twitter:
 
 * [Chat on Gitter](https://gitter.im/Front-End-Checklist/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 * [Facebook](https://www.facebook.com/frontendchecklist/)
 * [Twitter](https://twitter.com/thedaviddias)
 
-## Authors
+## Авторы
 
 **[David Dias](https://github.com/thedaviddias/Front-End-Checklist)**
 
-## License
+## Лицензия
 
 [![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 
