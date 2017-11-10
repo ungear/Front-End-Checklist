@@ -2,6 +2,7 @@
 
 [![Join the chat at https://gitter.im/Front-End-Checklist/Lobby](https://badges.gitter.im/Front-End-Checklist/Lobby.svg)](https://gitter.im/Front-End-Checklist/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Front‑End_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/thedaviddias/Front-End-Checklist/)
+[![Backers on Open Collective](https://opencollective.com/front-end-checklist/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/front-end-checklist/sponsors/badge.svg)](#sponsors)
 [![Contributors](https://img.shields.io/github/contributors/thedaviddias/Front-End-Checklist.svg)](https://github.com/thedaviddias/Front-End-Checklist/graphs/contributors)
 [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/thedaviddias/front-end-checklist)
 [![CC0](https://img.shields.io/badge/license-CC0-green.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
@@ -116,7 +117,7 @@
 > * 📖 [Favicons, Touch Icons, Tile Icons, etc. Which Do You Need? - CSS Tricks](https://css-tricks.com/favicon-quiz/)
 > * 📖 [PNG favicons - caniuse](https://caniuse.com/#feat=link-icon-png)
 
-* [ ] **Apple Touch Icon:** ![Low][low_img] Иконка для Apple задана с помощью apple-mobile-web-app-capable *(Создайте файл Apple Icon с разрешением как минимум 200x200px для поддержки всех разрешений, которые могут вам понадобиться).*
+* [ ] **Apple Touch Icon:** ![Low][low_img] Иконка для Apple задана с помощью apple-mobile-web-app-capable. *(Создайте файл Apple Icon с разрешением как минимум 200x200px для поддержки всех разрешений, которые могут вам понадобиться).*
 
 ```html
 <!-- Apple Touch Icon -->
@@ -328,7 +329,7 @@
 
 ### Производительность CSS
 
-- [ ] **Конкатенация:** ![High][high_img] CSS фыйлы сконкатенированы в один файл *(Не для HTTP/2)*.
+- [ ] **Конкатенация:** ![High][high_img] CSS фыйлы сконкатенированы в один файл. *(Не для HTTP/2)*.
 - [ ] **Минификация:** ![High][high_img] Все CSS файлы минифицированы.
 - [ ] **Неблокирующий CSS:** ![Medium][medium_img] CSS файлы должны быть неблокирующими DOM, чтобы избежать потерь времени.
 
@@ -493,7 +494,6 @@
 > * 📖 [Size Limit: Make the Web lighter](https://evilmartians.com/chronicles/size-limit-make-the-web-lighter)
 
 - [ ] **Минифицирование:** ![Medium][medium_img] Ваш HTML минифицирован.
-> * 🛠 [W3C Validator](https://validator.w3.org/)
 
 * [ ] **Ленивая загрузка (Lazy loading):** ![Medium][medium_img] Используйте lazy loading для загрузки картинок, скриптов и CSS чтобы уменьшить время инициализации страницы. Смотрите подробнее в соответствиющих секция чеклиста.
 
@@ -622,6 +622,9 @@
 > * 📖 [Introduction to Structured Data - Search - Google Developers](https://developers.google.com/search/docs/guides/intro-structured-data)
 > * 🛠 Проверьте свою страницу с [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)
 > * 🛠 Польный список слов, используемых в структурированных данных [Schema.org Full Heirarchy](http://schema.org/docs/full.html)
+> * 📖 [RDFa - Linked Data in HTML](https://rdfa.info/)
+> * 📖 [JSON-LD](https://json-ld.org/)
+> * 📖 [Microdata](https://www.w3.org/TR/microdata/)
 
 * [ ] **HTML карта сайта:** ![Medium][medium_img] HTML карта сайта существует и доступна по ссылке в подвале страницы.
 
@@ -644,6 +647,7 @@ Front-End Checklist также доступен на других языках. 
 * 🇻🇳 Вьетнамский: [euclid1990/Front-End-Checklist](https://github.com/euclid1990/Front-End-Checklist)
 * 🇹🇼 Традиционный китайский: [EngineLin/Front-End-Checklist](https://github.com/EngineLin/Front-End-Checklist)
 * 🇫🇷 Французский: [ynizon/Front-End-Checklist](https://github.com/ynizon/Front-End-Checklist)
+* 🇷🇺 Russian: [ungear/Front-End-Checklist](https://github.com/ungear/Front-End-Checklist)
 
 ---
 
@@ -677,10 +681,6 @@ Front-End Checklist также доступен на других языках. 
 
 Эта ветка будет использоваться для внесения значительных изменений в структуру или контент. Для устранения мелких ошибок и создания новых элементов предпочтительно использовать ветку master.
 
-### Помощники
-
-Зацените невероятно крутых помощников [contributors](https://github.com/thedaviddias/frontendchecklist/graphs/contributors).
-
 ## Поддержка
 
 Если у вас есть вопросы или пожелания, без колебаний пишите в Gitter или Twitter:
@@ -693,6 +693,33 @@ Front-End Checklist также доступен на других языках. 
 
 **[David Dias](https://github.com/thedaviddias/Front-End-Checklist)**
 
+## Помощники
+
+Проект существует благодаря помощи сообщества. [[Contribute]](CONTRIBUTING.md).
+<a href="graphs/contributors"><img src="https://opencollective.com/front-end-checklist/contributors.svg?width=890" /></a>
+
+## Backers
+
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/front-end-checklist#backer)]
+
+<a href="https://opencollective.com/front-end-checklist#backers" target="_blank"><img src="https://opencollective.com/front-end-checklist/backers.svg?width=890"></a>
+
+
+## Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/front-end-checklist#sponsor)]
+
+<a href="https://opencollective.com/front-end-checklist/sponsor/0/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/front-end-checklist/sponsor/1/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/front-end-checklist/sponsor/2/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/front-end-checklist/sponsor/3/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/front-end-checklist/sponsor/4/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/front-end-checklist/sponsor/5/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/front-end-checklist/sponsor/6/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/front-end-checklist/sponsor/7/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/front-end-checklist/sponsor/8/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/front-end-checklist/sponsor/9/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/9/avatar.svg"></a>
+
 ## Лицензия
 
 [![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
@@ -702,3 +729,5 @@ Front-End Checklist также доступен на других языках. 
 [low_img]: http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png
 [medium_img]: http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png
 [high_img]: http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png
+
+Syncronized with commit bb6cd67763036448f9b89ae69cbce00d570dbe55
