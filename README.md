@@ -1,4 +1,10 @@
-# Front-End Checklist
+![Front-End Checklist Logo](https://github.com/thedaviddias/Front-End-Checklist/blob/master/src/img/banners/front-end-checklist-banner-light.jpg?raw=true)
+
+<h2 align="center">Front-End Checklist</h2>
+
+<p align="center">
+  <em>The Front-End Checklist это исчерпывающий список элементов сайта или HTML страницы, которые должны быть проверены перед выпуском в production</em>
+</p>
 
 [![Join the chat at https://gitter.im/Front-End-Checklist/Lobby](https://badges.gitter.im/Front-End-Checklist/Lobby.svg)](https://gitter.im/Front-End-Checklist/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Front‑End_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/thedaviddias/Front-End-Checklist/)
@@ -7,12 +13,11 @@
 [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/thedaviddias/front-end-checklist)
 [![CC0](https://img.shields.io/badge/license-CC0-green.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-**Front-End Checklist** - это исчерпывающий список элементов сайта или HTML страницы, которые должны быть проверены перед выпуском в production.
-
 Он основан на многолетнем опыте front-end разработчиков и, кроме того, включает в себя части других открытых checklist-ов.
 
-*Проголосуй или порекомендуй Front-End Checklist на платформе Product Hunt чтобы помочь с продвижением.*
-[![](http://res.cloudinary.com/djnyaloac/image/upload/v1508896898/upvote-producthunt_vzys4c.jpg)](https://www.producthunt.com/posts/front-end-checklist)
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/HxqChNNHFKFaMpEpEikk4EM4/thedaviddias/Front-End-Checklist'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/HxqChNNHFKFaMpEpEikk4EM4/thedaviddias/Front-End-Checklist.svg' />
+</a>
 
 ## Содержание
 
@@ -629,7 +634,18 @@
 * [ ] **HTML карта сайта:** ![Medium][medium_img] HTML карта сайта существует и доступна по ссылке в подвале страницы.
 
 > * 📖 [Sitemap guidelines - Google Support](https://support.google.com/webmasters/answer/183668?hl=en)
-> * 🛠 [Sitemap generator](https://websiteseochecker.com/html-sitemap-generator/)
+
+* [ ] **Pagination теги:** ![Medium][medium_img] Задайте `rel="prev"` и `rel="next"` чтобы показать, что контент разбит на страницы.
+
+> * 🛠 [Pagination (rel="prev/next") Testing Tool](https://technicalseo.com/seo-tools/rel-prev-next/)
+
+> * 📖 [Pagination guidelines - Google Support](https://support.google.com/webmasters/answer/1663744?hl=en)
+
+```html
+<!-- Example: Pagination link tags for page 2 of a paginated list -->
+<link rel="prev" href="https://example.com/?page=1">
+<link rel="next" href="https://example.com/?page=3">
+```
 
 **[⬆ наверх](#Содержание)**
 
@@ -647,7 +663,8 @@ Front-End Checklist также доступен на других языках. 
 * 🇻🇳 Вьетнамский: [euclid1990/Front-End-Checklist](https://github.com/euclid1990/Front-End-Checklist)
 * 🇹🇼 Традиционный китайский: [EngineLin/Front-End-Checklist](https://github.com/EngineLin/Front-End-Checklist)
 * 🇫🇷 Французский: [ynizon/Front-End-Checklist](https://github.com/ynizon/Front-End-Checklist)
-* 🇷🇺 Russian: [ungear/Front-End-Checklist](https://github.com/ungear/Front-End-Checklist)
+* 🇷🇺 Русский: [ungear/Front-End-Checklist](https://github.com/ungear/Front-End-Checklist)
+* 🇹🇷 Турецкий: [erdoganoksuz/Front-End-Checklist](https://github.com/erdoganoksuz/Front-End-Checklist), [eraycetinay/Front-End-Checklist](https://github.com/eraycetinay/Front-End-Checklist)
 
 ---
 
@@ -696,8 +713,7 @@ Front-End Checklist также доступен на других языках. 
 ## Помощники
 
 Проект существует благодаря помощи сообщества. [[Contribute]](CONTRIBUTING.md).
-<a href="graphs/contributors"><img src="https://opencollective.com/front-end-checklist/contributors.svg?width=890" /></a>
-
+<a href="https://github.com/thedaviddias/Front-End-Checklist/graphs/contributors"><img src="https://opencollective.com/front-end-checklist/contributors.svg?width=890" /></a>
 ## Backers
 
 Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/front-end-checklist#backer)]
@@ -726,8 +742,8 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 
 **[⬆ наверх](#Содержание)**
 
-[low_img]: http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png
-[medium_img]: http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png
-[high_img]: http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png
+[low_img]: https://front-end-checklist.now.sh/low.svg
+[medium_img]: https://front-end-checklist.now.sh/medium.svg
+[high_img]: https://front-end-checklist.now.sh/high.svg
 
 Syncronized with commit bb6cd67763036448f9b89ae69cbce00d570dbe55
