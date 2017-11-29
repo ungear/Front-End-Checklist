@@ -1,6 +1,6 @@
-![Front-End Checklist Logo](https://github.com/thedaviddias/Front-End-Checklist/blob/master/src/img/banners/front-end-checklist-banner-light.jpg?raw=true)
+[![Front-End Checklist Logo](https://github.com/thedaviddias/Front-End-Checklist/blob/master/src/img/banners/front-end-checklist-banner-light.jpg?raw=true)](https://frontendchecklist.io)
 
-<h2 align="center">Front-End Checklist</h2>
+<h2 align="center"><a href="http://frontendchecklist.io">Front-End Checklist</a></h2>
 
 <p align="center">
   <em>The Front-End Checklist это исчерпывающий список элементов сайта или HTML страницы, которые должны быть проверены перед выпуском в production</em>
@@ -85,7 +85,7 @@
 
 ```html
 <!-- Задать viewport для responsive дизайна -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 ```
 
 * [ ] **Title:** ![High][high_img] Задан на всех страницах (SEO: Google рассчитывает ширину символов в title и обрезает примерно от 472 до 482 пикселей. Так что предел длины title около 55 символов).
@@ -105,7 +105,7 @@
 <meta name="description" content="Описание страницы короче 150 символов">
 ```
 
-> * 📖[Meta Description - HTML - MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_an_author_and_description)
+> * 📖 [Meta Description - HTML - MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_an_author_and_description)
 
 * [ ] **Favicons:** ![Medium][medium_img] Иконки отображаются корректно. Если у вас только один `favicon.ico`, положите его в корень сайта. Обычно вам не нужно ничего добавлять в разметку. Однако, хорошей практикой считается сделать ссылку как в примере ниже. На сегодняшний день **рекомендован PNG формат** вместо `.ico`(разрешение: 32x32px).
 
@@ -122,23 +122,31 @@
 > * 📖 [Favicons, Touch Icons, Tile Icons, etc. Which Do You Need? - CSS Tricks](https://css-tricks.com/favicon-quiz/)
 > * 📖 [PNG favicons - caniuse](https://caniuse.com/#feat=link-icon-png)
 
-* [ ] **Apple Touch Icon:** ![Low][low_img] Иконка для Apple задана с помощью apple-mobile-web-app-capable. *(Создайте файл Apple Icon с разрешением как минимум 200x200px для поддержки всех разрешений, которые могут вам понадобиться).*
+* [ ] **Apple Web App Meta:** ![Low][low_img] Заданы мета-теги для Apple
 
 ```html
-<!-- Apple Touch Icon -->
+<!-- Apple Touch Icon (не меньше, чем 200x200px) -->
 <link rel="apple-touch-icon" href="/custom-icon.png">
+
+<!-- Развернуть веб-приложение на полный экран -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!-- Задаёт стиль для Status Bar (возможные значения смотри по ссылке Supported Meta Tags ниже) -->
+<!-- Не имеет эффекта, если не выставлен предыдущий тег -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 ```
 
 > * 📖 [Configuring Web Applications](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
+> * 📖 [Supported Meta Tags](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html)
 
-- [ ] **Windows Tiles:**![Low][low_img] Windows tiles заданы.
+- [ ] **Windows Tiles:** ![Low][low_img] Windows tiles заданы.
 
 ```html
 <!-- Microsoft Tiles -->
 <meta name="msapplication-config" content="browserconfig.xml" />
 ```
 
-Минимальный требуемый browserconfig.xml:
+Минимальный требуемый `browserconfig.xml`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -311,7 +319,7 @@
 
 * [ ] **Отзывчивый (responsive) веб-дизайн:** ![High][high_img] Дизайн должен быть отзывчивым.
 * [ ] **CSS для печати:** ![Medium][medium_img] Стили для печати заданы и работают корректны.
-* [ ] **Препроцессоры:** ![Low][low_img] Используются препроцессоры, [Sass](http://sass-lang.com/) рекомендуется.
+* [ ] **Препроцессоры:** ![Low][low_img] Используются CSS препроцессоры.
 * [ ] **Уникальные ID:** ![High][high_img] Если используются Id, убедитесь, что они уникальны в пределах страницы.
 * [ ] **Сброс (reset) CSS:** ![High][high_img] Используются актуальные версии инструментов для нормализации CSS (reset, normalize или reboot). *(Если используете CSS фреймворк типа Bootstrap или Foundation, Normalize уже в них включён.)*
 
@@ -343,7 +351,7 @@
 
 - [ ] **Неиспользуемый CSS:** ![Low][low_img] Удалите неиспользуемые стили.
 
-> * 🛠 [UnCSS Online](https://uncss-online.com/) 🛠
+> * 🛠 [UnCSS Online](https://uncss-online.com/)
 > * 🛠 [PurifyCSS](https://github.com/purifycss/purifycss)
 > * 🛠 [Chrome DevTools Coverage](https://developers.google.com/web/updates/2017/04/devtools-release-notes#coverage)
 
@@ -421,6 +429,15 @@
 
 > * 📖 [Guidelines for Developing Secure Applications Utilizing JavaScript](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet#Guidelines_for_Developing_Secure_Applications_Utilizing_JavaScript)
 
+* [ ] **`noscript` tag:** ![Medium][medium_img] Используйте `<noscript>` внутри `<body>` чтобы задать контент для ситуаций, когда скрипты не поддерживаются или выключены в браузере. Полезно для Single Page Application (React, Angular и т.п.)
+[Пример](https://webdesign.tutsplus.com/tutorials/quick-tip-dont-forget-the-noscript-element--cms-25498)
+
+```html
+<noscript>
+  Для работы приложения необходимо включить JavaScript.
+</noscript>
+```
+
 * [ ] **Неблокирующий JS:** ![Medium][medium_img] JavaScript файлы загружаются асинхронно с  использованием атрибута `async` или отложенно с `defer`.
 
 > * 📖 [Remove Render-Blocking JavaScript](https://developers.google.com/speed/docs/insights/BlockingJS)
@@ -470,20 +487,21 @@
 > * 📖 [XSS (Cross Site Scripting) Prevention Cheat Sheet  - OWASP](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
 > * 📖 [DOM based XSS Prevention Cheat Sheet  - OWASP](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
 
-* [ ] **Заголовок Content-Type** ![Medium][medium_img] Предотвратить mime-sniff (анализ контента и подмена заголовка content-type) в Google Chrome и Internet Explorer.
+* [ ] **Заголовок Content-Type:** ![Medium][medium_img] Предотвратить mime-sniff (анализ контента и подмена заголовка content-type) в Google Chrome и Internet Explorer.
 
 > * 📖 [X-Content-Type-Options - Scott Helme](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-content-type-options)
 
-* [ ] **X-Frame-Options (XFO)** ![Medium][medium_img] Защитите своих пользователей от атак типа clickjacking.
+* [ ] **X-Frame-Options (XFO):** ![Medium][medium_img] Защитите своих пользователей от атак типа clickjacking.
 
 > * 📖 [X-Frame-Options - Scott Helme](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-frame-options)
 > * 📖 [RFC7034 - HTTP Header Field X-Frame-Options](https://tools.ietf.org/html/rfc7034)
 
-* [ ] **Политика безопасности контента (Content Security Policy)** ![Medium][medium_img] Задайте правила, определяющие, какой контент и откуда разрешено загружать на ваш сайт. Также это поможет защититься против атак clickjacking.
+* [ ] **Политика безопасности контента (Content Security Policy):** ![Medium][medium_img] Задайте правила, определяющие, какой контент и откуда разрешено загружать на ваш сайт. Также это поможет защититься против атак clickjacking.
 
 > * 📖 [Content Security Policy - An Introduction - Scott Helme](https://scotthelme.co.uk/content-security-policy-an-introduction/)
 > * 📖 [CSP Cheat Sheet - Scott Helme](https://scotthelme.co.uk/csp-cheat-sheet/)
 > * 📖 [CSP Cheat Sheet - OWASP](https://www.owasp.org/index.php/Content_Security_Policy_Cheat_Sheet)
+> * 📖 [Content Security Policy Reference](https://content-security-policy.com/)
 
 **[⬆ наверх](#Содержание)**
 
@@ -664,7 +682,7 @@ Front-End Checklist также доступен на других языках. 
 * 🇹🇼 Традиционный китайский: [EngineLin/Front-End-Checklist](https://github.com/EngineLin/Front-End-Checklist)
 * 🇫🇷 Французский: [ynizon/Front-End-Checklist](https://github.com/ynizon/Front-End-Checklist)
 * 🇷🇺 Русский: [ungear/Front-End-Checklist](https://github.com/ungear/Front-End-Checklist)
-* 🇹🇷 Турецкий: [erdoganoksuz/Front-End-Checklist](https://github.com/erdoganoksuz/Front-End-Checklist), [eraycetinay/Front-End-Checklist](https://github.com/eraycetinay/Front-End-Checklist)
+* 🇹🇷 Турецкий: [eraycetinay/Front-End-Checklist](https://github.com/eraycetinay/Front-End-Checklist)
 
 ---
 
@@ -746,4 +764,4 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 [medium_img]: https://front-end-checklist.now.sh/medium.svg
 [high_img]: https://front-end-checklist.now.sh/high.svg
 
-Syncronized with commit c4943db7cb56db6c01818ea2fdea250f6a9ed7d9
+Syncronized with commit 93123411734fbdae39c4747f81c220f68c42cb85
