@@ -15,10 +15,6 @@
 
 Он основан на многолетнем опыте front-end разработчиков и, кроме того, включает в себя части других открытых checklist-ов.
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/HxqChNNHFKFaMpEpEikk4EM4/thedaviddias/Front-End-Checklist'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/HxqChNNHFKFaMpEpEikk4EM4/thedaviddias/Front-End-Checklist.svg' />
-</a>
-
 ## Содержание
 
 1. **[Head](#head)**
@@ -46,6 +42,8 @@
 * 🛠: он-лайн инструменты / утилиты для проверки
 * 📹: медиа или видео контент
 
+> Если хотите внести вклад в ***Front-End Checklist App***, прочтите [README_APP file](https://github.com/thedaviddias/Front-End-Checklist/blob/master/README_APP.md).
+
 ---
 
 ## Head
@@ -57,8 +55,7 @@
 * [ ] **Doctype:** ![High][high_img] Doctype относится к HTML5 и находится в самом верху HTML страниц.
 
 ```html
-<!-- Doctype HTML5 -->
-<!doctype html>
+<!doctype html> <!-- HTML5 -->
 ```
 
 > * 📖 [Определение кодировки (англ.) - HTML5 W3C](https://www.w3.org/TR/html5/syntax.html#determining-the-character-encoding)
@@ -319,7 +316,7 @@
 
 * [ ] **Отзывчивый (responsive) веб-дизайн:** ![High][high_img] Дизайн должен быть отзывчивым.
 * [ ] **CSS для печати:** ![Medium][medium_img] Стили для печати заданы и работают корректны.
-* [ ] **Препроцессоры:** ![Low][low_img] Используются CSS препроцессоры.
+* [ ] **Препроцессоры:** ![Low][low_img] Используйте CSS препроцессоры (например [Sass](http://sass-lang.com/), [Less](http://lesscss.org/), [Stylus](http://stylus-lang.com/)).
 * [ ] **Уникальные ID:** ![High][high_img] Если используются Id, убедитесь, что они уникальны в пределах страницы.
 * [ ] **Сброс (reset) CSS:** ![High][high_img] Используются актуальные версии инструментов для нормализации CSS (reset, normalize или reboot). *(Если используете CSS фреймворк типа Bootstrap или Foundation, Normalize уже в них включён.)*
 
@@ -373,7 +370,7 @@
 * [ ] **Мобильные браузеры:**  ![High][high_img] Все страницы были протестированы на всех поддерживаемых мобильных браузерах (Native browser, Chrome, Safari...).
 * [ ] **ОС:**  ![High][high_img] Все страницы были протестированы на всех поддерживаемых ОС (Windows, Android, iOS, Mac...).
 
-- [ ] **Pixel perfect:** ![High][high_img] Все страницы выполнены с пиксельной точностью. В зависимости от качества макета, вы можете не достигнуть 100% соответствия, но к этому нужно стремиться.
+- [ ] **Точное соответствие макету:** ![Low][low_img] В зависимости от проекта и качества макета, перед вами может стоять задача сделать разметку идеально соответствующей дизайну. Используйте специальные инструменты, чтобы проверить вашу реализацию на соответствие макету. 
 
 > [Pixel Perfect - Chrome Extension](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en)
 
@@ -397,6 +394,10 @@
 > * 🛠 [Imagemin](https://github.com/imagemin/imagemin)
 > * 🛠 Используйте [ImageOptim](https://imageoptim.com/) для бесплатной оптимизации картинок.
 > * 🛠 Используйте [Kraken.io](https://kraken.io/web-interface) как крутую альтернативу для оптимизации png и jpg. До 1 Mb бесплатно.
+> * 🛠 Используйте [TinyPNG](https://tinypng.com/) для оптимизации png, apng (анимированный png) and jpg без потери качества. Есть как платная, так и бесплатная версия.
+> * 🛠 [ZorroSVG](http://quasimondo.com/ZorroSVG/) jpg-подобное сжатие для прозрачных картинок  использованием svg масок.
+> * 🛠 [SVGO](https://github.com/svg/svgo) инструмент под Nodejs для оптимизации SVG файлов. 
+> * 🛠 [SVGOMG](https://jakearchibald.github.io/svgomg/) web версия SVGO для онлайн оплимизации SVG файлов.
 
 * [ ] **Picture/Srcset:** ![Medium][medium_img] Используйте picture/srcset чтобы задать наиболее подходящую картинку для текущего viewport.
 
@@ -441,6 +442,11 @@
 * [ ] **Неблокирующий JS:** ![Medium][medium_img] JavaScript файлы загружаются асинхронно с  использованием атрибута `async` или отложенно с `defer`.
 
 > * 📖 [Remove Render-Blocking JavaScript](https://developers.google.com/speed/docs/insights/BlockingJS)
+
+* [ ] **Оптимизированние и актуальные версии JS библиотек:** ![Medium][medium_img] Убедитесь, что все загружаемые JS библиотеки действительно необходимы, избавьтесь от неиспользуемых. Несложный функционал предпочтительно реализовывать на чистом (vanilla) JavaScript. Используйте последние версии библиотек. В них меньше ошибок и они более безопасны по сравнению с устаревшими версиями.
+
+> * 📖 [You may not need jQuery](http://youmightnotneedjquery.com/)
+> * 📖 [Vanilla JavaScript for building powerful web applications](https://plainjs.com/)
 
 * [ ] **Modernizr:** ![Low][low_img] С помощью кастомного Modernizr можно добавлять классы к `<html>`.
 
@@ -514,6 +520,7 @@
 - [ ] **Вес страницы:** ![High][high_img] Вес каждой страницы должен быть от 0 до 500 KB.
 
 > * 🛠 [Website Page Analysis](https://tools.pingdom.com)
+> * 🛠 [WebPageTest](https://www.webpagetest.org/)
 > * 📖 [Size Limit: Make the Web lighter](https://evilmartians.com/chronicles/size-limit-make-the-web-lighter)
 
 - [ ] **Минифицирование:** ![Medium][medium_img] Ваш HTML минифицирован.
@@ -683,6 +690,7 @@ Front-End Checklist также доступен на других языках. 
 * 🇫🇷 Французский: [ynizon/Front-End-Checklist](https://github.com/ynizon/Front-End-Checklist)
 * 🇷🇺 Русский: [ungear/Front-End-Checklist](https://github.com/ungear/Front-End-Checklist)
 * 🇹🇷 Турецкий: [eraycetinay/Front-End-Checklist](https://github.com/eraycetinay/Front-End-Checklist)
+* 🇩🇪 Немецкий: [xfuture603/Front-End-Checklist](https://github.com/xFuture603/Front-End-Checklist)
 
 ---
 
@@ -724,9 +732,9 @@ Front-End Checklist также доступен на других языках. 
 * [Facebook](https://www.facebook.com/frontendchecklist/)
 * [Twitter](https://twitter.com/thedaviddias)
 
-## Авторы
+## Автор
 
-**[David Dias](https://github.com/thedaviddias/Front-End-Checklist)**
+**[David Dias](https://github.com/thedaviddias)**
 
 ## Помощники
 
@@ -764,4 +772,4 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 [medium_img]: https://front-end-checklist.now.sh/medium.svg
 [high_img]: https://front-end-checklist.now.sh/high.svg
 
-Syncronized with commit 93123411734fbdae39c4747f81c220f68c42cb85
+Syncronized with commit 07b7ba6
