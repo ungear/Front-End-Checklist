@@ -1,17 +1,43 @@
-[![Front-End Checklist Logo](https://github.com/thedaviddias/Front-End-Checklist/blob/master/src/img/banners/front-end-checklist-banner-light.jpg?raw=true)](https://frontendchecklist.io)
+<h1 align="center">
+<br>
+  <img src="https://raw.githubusercontent.com/thedaviddias/Front-End-Checklist/master/src/img/banners/logo-front-end-checklist.jpg" alt="Front-End Checklist" width="170">
+  <br>
+    <br>
+  Front-End Checklist
+  <br>
+</h1>
 
-<h2 align="center"><a href="http://frontendchecklist.io">Front-End Checklist</a></h2>
+<h4 align="center">The Front-End Checklist это исчерпывающий список элементов сайта или HTML страницы, которые должны быть проверены перед выпуском в production</h4>
 
 <p align="center">
-  <em>The Front-End Checklist это исчерпывающий список элементов сайта или HTML страницы, которые должны быть проверены перед выпуском в production</em>
+   <a href=“http://makeapullrequest.com">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome">
+    </a>
+    <a href=“https://github.com/thedaviddias/Front-End-Checklist/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/thedaviddias/Front-End-Checklist.svg?style=flat-square" alt="Contributors">
+  </a>
+  <a href=“https://gitter.im/Front-End-Checklist/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link">
+    <img src="https://img.shields.io/badge/chat-on_gitter-008080.svg?style=flat-square" alt="Gitter">
+  </a>
+      <a href=“https://github.com/thedaviddias/Front-End-Checklist/">
+    <img src="https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg?style=flat-square" alt="Front‑End_Checklist followed">
+</a>
+    <a href=“https://creativecommons.org/publicdomain/zero/1.0/">
+    <img src="https://img.shields.io/badge/license-CC0-green.svg?style=flat-square" alt="CC0">
+  </a>
 </p>
 
-[![Join the chat at https://gitter.im/Front-End-Checklist/Lobby](https://badges.gitter.im/Front-End-Checklist/Lobby.svg)](https://gitter.im/Front-End-Checklist/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Front‑End_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/thedaviddias/Front-End-Checklist/)
-[![Backers on Open Collective](https://opencollective.com/front-end-checklist/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/front-end-checklist/sponsors/badge.svg)](#sponsors)
-[![Contributors](https://img.shields.io/github/contributors/thedaviddias/Front-End-Checklist.svg)](https://github.com/thedaviddias/Front-End-Checklist/graphs/contributors)
-[![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/thedaviddias/front-end-checklist)
-[![CC0](https://img.shields.io/badge/license-CC0-green.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+<p align="center">
+  <a href="#Как-этим-пользоваться?">Как пользоваться</a> •
+  <a href="#contributing">Contributing</a> •
+  <a href="https://frontendchecklist.io">Сайт</a>
+  <a href="https://www.producthunt.com/posts/front-end-checklist">Product Hunt</a>
+</p>
+<p align="center">
+    <span>Другие чек-дисты:</span>
+    <br>
+  <a href="https://github.com/thedaviddias/Front-End-Performance-Checklist#---------front-end-performance-checklist-">🎮 Front-End Performance Checklist</a> • <a href="https://github.com/thedaviddias/Front-End-Design-Checklist#front-end-design-checklist">💎 Front-End Design Checklist</a>
+</p>
 
 Он основан на многолетнем опыте front-end разработчиков и, кроме того, включает в себя части других открытых checklist-ов.
 
@@ -60,7 +86,7 @@
 
 > * 📖 [Определение кодировки (англ.) - HTML5 W3C](https://www.w3.org/TR/html5/syntax.html#determining-the-character-encoding)
 
-*Следующие 3 мета-тега (Charset, X-UA Compatible and Viewport) должны быть расположены в самом начале `<head>`.*
+*Следующие 2 мета-тега (Charset и Viewport) должны быть расположены в самом начале `<head>`.*
 
 * [ ] **Charset:** ![High][high_img] Кодировка (UTF-8) задана правильно.
 
@@ -68,15 +94,6 @@
 <!-- Задать кодировку документа -->
 <meta charset="utf-8">
 ```
-
-* [ ] **X-UA-Compatible:** ![Medium][medium_img] Тег X-UA-Compatible присутствует.
-
-```html
-<!-- Проинструктировать Internet Explorer использовать последний движок рендеринга -->
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-```
-
-> * 📖 [Задать режим совместимости Internet Explorer (англ.)](https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx)
 
 * [ ] **Viewport:** ![High][high_img] Viewport задан правильно.
 
@@ -350,6 +367,7 @@
 
 > * 🛠 [UnCSS Online](https://uncss-online.com/)
 > * 🛠 [PurifyCSS](https://github.com/purifycss/purifycss)
+> * 🛠 [PurgeCSS](https://github.com/FullHuman/purgecss)
 > * 🛠 [Chrome DevTools Coverage](https://developers.google.com/web/updates/2017/04/devtools-release-notes#coverage)
 
 
@@ -472,7 +490,7 @@
 
 ### Лучшие практики
 
-* [ ] **HTTPS:** ![Medium][medium_img] HTTPS используется на всех страницах, а также для всего стороннего контента (плагины, картинки...).
+* [ ] **HTTPS:** ![High][high_img] HTTPS используется на всех страницах, а также для всего стороннего контента (плагины, картинки...).
 
 > * 🛠 [Let's Encrypt - Free SSL/TLS Certificates](https://letsencrypt.org/)
 > * 🛠 [Free SSL Server Test](https://www.ssllabs.com/ssltest/index.html)
@@ -517,7 +535,10 @@
 
 ### Лучшие практики
 
-- [ ] **Вес страницы:** ![High][high_img] Вес каждой страницы должен быть от 0 до 500 KB.
+- [ ] **Цели:** ![Medium][medium_img] Необходимо достичь следующих параметров:
+  - First Meaningful Paint (показать что-то осмысленное) не позже, чем через 1 секунду
+  - Time To Interactive (время до первого взаимодействия с пользователем) в течение 5 секунд для "среднего" устройства (смартфон на Android за 200$ медленной 3G сети с 400ms RTT и скоростью передачи 400kbps) и до 2 секунд для следующих визитов
+  - Размер критичных файлов до 170Kb gzipped
 
 > * 🛠 [Website Page Analysis](https://tools.pingdom.com)
 > * 🛠 [WebPageTest](https://www.webpagetest.org/)
@@ -601,15 +622,6 @@
 
 > * 📹 [Why headings and landmarks are so important -- A11ycasts #18](https://www.youtube.com/watch?v=vAAzdi1xuUY&index=9&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 
-#### ARIA landmarks
-
-- [ ] **Role banner:** ![High][high_img] У `<header>` проставлен `role="banner"`.
-- [ ] **Role navigation:** ![High][high_img] у `<nav>` проставлен `role="navigation"`.
-- [ ] **Role main:** ![High][high_img] У `<main>` проставлен `role="main"`.
-
-> * 📖 [Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/GL/wiki/Using_ARIA_landmarks_to_identify_regions_of_a_page)
-> * 📖 [ARIA roles categorization](https://www.w3.org/TR/wai-aria/roles#roles_categorization)
-
 ### Семантика
 
 - [ ] **Специальные типы input для HTML5:** ![Medium][medium_img] Это особенно важно для мобильных устройств, т.к. там используется разные клавиатуры для разных типов вводимых данных.
@@ -691,7 +703,7 @@ Front-End Checklist также доступен на других языках. 
 * 🇷🇺 Русский: [ungear/Front-End-Checklist](https://github.com/ungear/Front-End-Checklist)
 * 🇹🇷 Турецкий: [eraycetinay/Front-End-Checklist](https://github.com/eraycetinay/Front-End-Checklist)
 * 🇩🇪 Немецкий: [xfuture603/Front-End-Checklist](https://github.com/xFuture603/Front-End-Checklist)
-
+* 🇺🇦 Украинский: [antonkryvko/Front-End-Checklist](https://github.com/antonkryvko/Front-End-Checklist)
 ---
 
 ## Front-End Checklist Badge
@@ -738,7 +750,7 @@ Front-End Checklist также доступен на других языках. 
 
 ## Помощники
 
-Проект существует благодаря помощи сообщества. [[Contribute]](CONTRIBUTING.md).
+Проект существует благодаря помощи сообщества. [[Contribute]](.github/CONTRIBUTING.md).
 <a href="https://github.com/thedaviddias/Front-End-Checklist/graphs/contributors"><img src="https://opencollective.com/front-end-checklist/contributors.svg?width=890" /></a>
 ## Backers
 
@@ -762,6 +774,8 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 <a href="https://opencollective.com/front-end-checklist/sponsor/8/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/8/avatar.svg"></a>
 <a href="https://opencollective.com/front-end-checklist/sponsor/9/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/9/avatar.svg"></a>
 
+
+
 ## Лицензия
 
 [![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
@@ -772,4 +786,4 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 [medium_img]: https://front-end-checklist.now.sh/medium.svg
 [high_img]: https://front-end-checklist.now.sh/high.svg
 
-Syncronized with commit 07b7ba6
+Syncronized with commit 225705b3bb4c7b05a6f818203b408575fe240473
