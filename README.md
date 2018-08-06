@@ -28,7 +28,7 @@
 </p>
 
 <p align="center">
-  <a href="#Как-этим-пользоваться?">Как пользоваться</a> •
+  <a href="#Как-этим-пользоваться">Как пользоваться</a> •
   <a href="#contributing">Contributing</a> •
   <a href="https://frontendchecklist.io">Сайт</a>
   <a href="https://www.producthunt.com/posts/front-end-checklist">Product Hunt</a>
